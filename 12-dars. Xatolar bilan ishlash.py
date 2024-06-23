@@ -143,14 +143,14 @@ for meva in mevalar:
 #print(f"Chipta {narh} so'm")
 
 # 3.
-#x = float(input("Birinchi sonni kiriting: "))
-#y = float(input("Ikkinchi sonni kiriting: "))
-#if x==y:
-#    print(f"{x}={y}")
-#elif x<y:
-#    print(f"{x}<{y}")
-#else:
-#    print(f"{x}>{y}")
+x = float(input("Birinchi sonni kiriting: "))
+y = float(input("Ikkinchi sonni kiriting: "))
+if x==y:
+    print(f"{x}={y}")
+elif x<y:
+    print(f"{x}<{y}")
+else:
+    print(f"{x}>{y}")
     
 # 4.    
 #mahsulotlar = ['un', "yog'", "sovun", 'tuxum', 'piyoz',
