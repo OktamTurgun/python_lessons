@@ -160,27 +160,29 @@ countries = {
     'misr':'qohira',
     'iroq':'bagdad'
     }
-#print("Dunyo davlatlari:")
-#for davlat, poytaxt in sorted(countries.items()):
-#    print(f"Davlat: {davlat.title()} -  poytaxti {poytaxt.title()}")
+print("Dunyo davlatlari:")
+for davlat, poytaxt in sorted(countries.items()):
+    print(f"Davlat: {davlat.title()} -  poytaxti {poytaxt.title()}")
 
 # 3. Foydalanuvchidan istalgan davlatni kiritishni so'rang va shu davlatning poytaxtini
 #    konsolga chiqaring. Agar foydalanuvchi lug'atda yo'q davlatni kiritsa, 
 #    "Bizda bunday ma'lumot yo'q" degan xabarni chiqaring.
 
-#davlat = input('\nQaysi davlatning poytaxtini bilishni istaysiz? ').lower()
-#poytaxt = countries.get(davlat)
-#if poytaxt == None:
-#    print("Kechirasiz bizda bu xaqida ma'lumot yo'q!")
-#else:
-#   print(f"{davlat.upper()}ning - poytaxti {poytaxt.title()}")
+davlat = input('\nQaysi davlatning poytaxtini bilishni istaysiz? ').lower()
+poytaxt = countries.get(davlat)
+if poytaxt == None:
+    print("Kechirasiz bizda bu xaqida ma'lumot yo'q!")
+else:
+   print(f"{davlat.upper()}ning - poytaxti {poytaxt.title()}")
 
-#country = input('Qaysi davlatning poytaxtini bilishni istaysiz?:').lower()
-#capital = countries.get(country)
-#if capital==None:
-#    print('Kechirasiz, bizda bu haqida ma\'lumot yo\'q')    
-#else:
-#    print(f"{country.upper()}ning poytaxti {capital.title()} shahri")
+###
+
+country = input('Qaysi davlatning poytaxtini bilishni istaysiz?:').lower()
+capital = countries.get(country)
+if capital==None:
+    print('Kechirasiz, bizda bu haqida ma\'lumot yo\'q')    
+else:
+    print(f"{country.upper()}ning poytaxti {capital.title()} shahri")
 
 # 4. Restoran menusi lug'atini tuzing (kamida 10 ta taom-narh juftligini kiriting).
 # Foydalanuvchidan 3 ta ovqat buyurtma berishni so'rang. Foydalanuvchi kiritgan taomlarni 
