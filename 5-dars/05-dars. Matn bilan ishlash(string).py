@@ -1,6 +1,6 @@
 
 """
-05-dars.Python darslari| Matn bilan ishlash
+05-dars.Python darslari| Matn bilan ishlash (String)
 
 Created on Thu May 30 08:54:19 2024
 
@@ -10,18 +10,18 @@ Created on Thu May 30 08:54:19 2024
 #ism = "Uktam"
 
 #shahar = "ҚЎқўон"
-#viloyat = "Фаргона"
+#viloyat = "Фаргона"!
 
-#matn = "Men yangi 📱 oldim"
-#print(matn)
-#xabar = "Hello, hov are you? 😂"
-#print(xabar)
+matn = "Men yangi 📱 oldim"
+print(matn)
+xabar = "Hello, how are you? 😂"
+print(xabar)
 
 #  STRING USTIDA AMALLAR
 
 # Matnlarni qo'shish uchun + operatoridan foydalanmiz:
-#ism = "Mustafo"
-#print("Mening ismim " + ism )
+ism = "Mustafo"
+print("Mening ismim " + ism )
 
 #ism = "O'ktam"
 #familiya = "Turg'unov"
