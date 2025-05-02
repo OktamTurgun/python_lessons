@@ -14,7 +14,7 @@ Created on Thu May 30 08:54:19 2024
 
 #matn = "Men yangi 📱 oldim"
 #print(matn)
-#xabar = "Men xammasiga 😂 qo'ydim "
+#xabar = "Hello, hov are you? 😂"
 #print(xabar)
 
 #  STRING USTIDA AMALLAR
