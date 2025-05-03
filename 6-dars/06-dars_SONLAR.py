@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 """
+06-dars.Python darslari| Sonlar (Number)
+
 Created on Fri May 31 09:10:20 2024
 
 @author: uktam
@@ -60,8 +62,3 @@ Created on Fri May 31 09:10:20 2024
 #print(f"{son1}-{son2} =" , son1-son2)
 #print(f"{son1}x{son2} =" , son1*son2)
 #print(f"{son1}/{son2} =" , son1/son2)
-
-
-
-
-
