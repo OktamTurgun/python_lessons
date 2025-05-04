@@ -148,4 +148,3 @@ Created on Sat Jun  1 10:34:55 2024
 #yangi_mexmonlar.append(friends.pop(-2))
 #print(f"Mexmonga kelgan do'stlar {friends.pop(2)} ,{friends.pop(0)}")
 #print('\nKelgan mexmonlar:', yangi_mexmonlar )
-
