@@ -14,4 +14,7 @@ print(uzbek_foods)
 
 # Yuqoridagi nonushta ro'yxatini o'zgarmas ro'yxatga aylantiring va nonushta[0] = "qaymoq va non" deb qiymat berib ko'ring.
 breakfast = tuple(breakfast)
+
+# Bu xato beradi, chunki tuple o'zgarmas 
+breakfast[0] = 'uzum' # TypeError: 'tuple' object does not support item assignment
 print(type(breakfast))
