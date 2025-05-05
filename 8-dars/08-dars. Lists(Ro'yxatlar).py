@@ -2,12 +2,11 @@
 """
 Created on Sun Jun  2 12:02:46 2024
 
-08-dars. LISTS (RO'YXATALAR bilan tsnishish) 
+08-dars. LISTS (RO'YXATALAR bilan tanishish) 
 
 @author: uktam
 """
 
-# #  T A R T I B L A 
 # Aksar holatlarda ro'yxat ichidagi elementlarni alifbo ketma-ketligida 
 # tartiblash talab qilinishi mumkin. Buning uchun list uchun maxsus 
 # .sort() metodidan foydalanamiz.
@@ -301,6 +300,183 @@ Created on Sun Jun  2 12:02:46 2024
 #nonushta = tuple(nonushta)
 #nonushta['non']
 
+# Ynagi mashqlar bilan boyotildi
 
+# .sort() methodi ro'yxatni alifbo tartibida tartiblaydi, ro'yxatni joyida o'zgartiradi (in-place)
+
+cars = ['Bmw', 'mercedes-benz', 'volvo', 'General motors', 'tesla', 'ferrari', 'audi',
+    'toyota', 'honda', 'nissan', 'ford', 'chevrolet', 'volkswagen', 'hyundai',]
+
+# cars.sort(key=str.lower) # Barchasini kichik harflarda solishtiradi
+# print(cars)
+# cars.sort(reverse=True) # Ro'yxatni teskari tartibda tartiblaydi, original ro'yxat o'zgaradi
+# print(cars)
+
+# sorted() funktsiyasi yangi tartiblangan ro'yxat qaytaradi, original ro'yxat o'zgarmaydi
+
+# print(sorted(cars))
+# sorted_cars = sorted(cars, key=str.lower) # Original ro'yxat o'zgarmaydi
+# print(cars)
+
+fruits = ['olma', 'anor', 'banan', 'uzum', 'nok', 'shaftoli', 'mandarin',
+    'limon', 'gilos', 'qulupnay', 'behi', 'xurmo', 'anjir']
+# sorted_fruits = sorted(fruits)
+# print("Tartiblangan: ", fruits)
+
+# reversed_fruits = sorted(fruits, reverse=True) # Original list o'zgarmagan
+
+# print("Tartiblangan, original list o'zgarmagan: ", sorted_fruits)
+
+sonlar = [19, 54, 98, 23, 71.5, 8.0, 123, 16, -12.5, -0.5, 2]
+# sonlar.sort(reverse=True) # Teskari tartiblaydi, original list o'zgaradi
+# reversed_sonlar = sorted(sonlar, reverse=True) # teskari tartiblaydi original list o'zgarmaydi
+# print(sonlar[::-1]) # Sonlarni faqat terskari tartibda chiqarish kerak bo'lsa, tartiblanmagan xolda
+
+# reverse() funksiyasi ro'yxatni ortidan boshlab chiqarish uchun ishlatiladi
+# cars.reverse()
+# print(cars)
+
+# len() funksiyasi ro'yxat uzunligini qaytaradi
+# print(f"Length of cars list: {len(cars)}")
+# print("Sonlar ro'yxati: ", len(sonlar), "ta")
+# length = len(sonlar)
+
+# range() funksiyasi ma'lum bir oraliqdagi sonlar ro'yxatini qaytaradi
+
+# numbers = list(range(0, 10))
+# print(numbers)
+# numbers.reverse()
+# print(numbers)
+
+# odd_numbers = list(range(1,20,2))
+# print(odd_numbers)
+
+# even_numbers = list(range(2,20,2))
+
+# max_value = max(even_numbers)
+
+# narhlar = [1000, 3500, 7000, 19500, 1127000, 120000, 5500]
+
+# min_price = min(narhlar)
+# max_price = max(narhlar)
+# sum_prices = sum(narhlar)
+# print(f"Eng arzon narh: {min_price}. \nEng qimmat narh: {max_price} \nJami: {sum_prices}")
+
+# Ro'yxatni keshish
+
+# my_cars = cars[0:3]
+# print(f"Garajdagi moshinalar: {my_cars}")
+# print("Garjdagi moshinalar: ", my_cars)
+
+# join() metodi yordamida ro'yxatni stringga aylantirib, katta-kichik harf muammosidan qutulishimiz mumkin
+
+# red_cars = cars[:5]
+# print(f"Garajdagi moshinalar: {', '.join(red_cars)}")
+# print("Garjdagi moshinalar: " + ", " .join(red_cars))
+
+"""
+  String Kesmalari (Slicing)
+ [start:stop:step] sintaksisi yordamida stringning bir qismini ajratib olish mumkin.
+
+  Asosiy kesma qoidalari:
+1. s[start:stop] - start indeksidan stop indeksigacha (stop kirmaydi)
+
+2. s[start:] - startdan oxirigacha
+
+3. s[:stop] - boshidan stopgacha
+
+4. s[:] - butun string
+
+5. s[::step] - qadam bilan olish
+"""
+
+# print(cars[3:7]) # (3 dan 6 gacha )
+# print(cars[10:]) # (10 dan oxirgacha) 
+# print(cars[:5]) # (boshidan 5 gacha) 
+# print(cars[:])  # (butun list)
+# print(cars[::3]) # (boshidan xar 3 - element) 
+# print(cars[-5:]) # (oxiridan 5 ta element)
+# print(cars[:-7]) # (oxiridan 7 tasini olmaydi ro'yxatga) 
+# print(cars[::1]) # (Ro'yxatni teskari qaytaradi) 
+# print(cars[10:4:-1]) # (10 dan 4 gacha teskari) 
+# print(cars[1:9:2]) # (1 dan 9 gacha 2 qadam bilan)
+
+# Ro'yxatdan Nusxa olish
+
+# my_cars = cars
+# my_cars.remove("audi")
+# my_cars[0] = "tesla 3"
+# print(my_cars)
+# print(cars)
+
+"""
+Ro'yxatdan nusxa olish uchun yuoqirdagi ka'bi ro'yxatni KESISH usulidan [:] foydalanamiz. 
+Faqatgina, kvadrat qavs ichida [:] ikkala indeksni ham ko'rsatmasdan, bo'sh qoldiramiz:
+"""
+# my_cars = cars[:]
+# my_cars = my_cars[:-5]
+
+# cars.remove("audi")
+# cars.remove('volvo')
+
+# print("These are my cars: ", my_cars)
+# print(cars)
+
+"""
+  Tuples - bu Python dasturlash tilidagi o'zgarmas (immutable) ma'lumotlar strukturasi. 
+  List (ro'yxat)larga o'xshash, lekin ularni yaratilgandan keyin o'zgartirib bo'lmaydi.
+
+Asosiy Xususiyatlari:
+1. O'zgarmaslik - Yaratilgandan keyin elementlarni o'zgartirib bo'lmaydi
+
+2. Qavs bilan yoziladi - Odatiy holda () ichida yoziladi, lekin qavssiz ham yaratish mumkin
+
+3. Har xil turdagi ma'lumotlarni saqlashi mumkin - Bir tuple ichida turli turdagi 
+   ma'lumotlar bo'lishi mumkin
+"""
+# Oddiy tuple
+toys = ('bus', 'mcqueen', 'dino', 'snake', 'lizard', 'car', 'train')
+# print(toys[0]) # bus
+# print(toys[-1]) # train
+# print(toys[1:4]) # ('mcqueen', 'dino', 'snake')
+# print(f"Toys in the warehouse: {', '.join(toys)}")
+
+# Qavssiz tuple 
+my_toys = 'bus', 'mcqueen', 'train', 'car'
+# print("My toys: "+", " .join(my_toys).title()) # My toys: Bus, Mcqueen, Train, Car
+
+# Faqat 1 lementli tuple (vergul bilan)
+outdated_toys = ('dino',)
+# print('Outdated toys: '+', ' .join(outdated_toys).upper()) # Outdated toys: DINO
+
+# Bu xato beradi chinki bu o'zgarmas 
+#toys[0] = "doll" # TypeError: 'tuple' object does not support item assignment
+# toys.append("ball") # AttributeError: 'tuple' object has no attribute 'append'
+
+"""
+To'g'ridan to'g'ri tupleni orzgartirib yoki element qo'shib bo'lmaydi, lekin muqobil yo'l mavjud:
+"""
+original = (1, 2, 3)
+new_element = 4
+
+# + opratori yordamida
+new_tuple = original + (new_element,)
+print(new_tuple) # (1, 2, 3, 4)
+
+# yoki 
+new_tuple = (*original, new_element)
+print(new_tuple) # (1, 2, 3, 4)
+
+# Listga o'tkazib, o'zgartirib, qayta tuple qilish:
+toys = list(toys)
+toys.append("duck")
+toys = tuple(toys)
+print(toys) # ('bus', 'mcqueen', 'dino', 'snake', 'lizard', 'car', 'train', 'duck')
+
+# Bir necha element qo'shish
+
+colors = ('green', 'red', 'white')
+new_colors = colors + ('blue', 'black')
+print(new_colors) # ('green', 'red', 'white', 'blue', 'black')
 
 
