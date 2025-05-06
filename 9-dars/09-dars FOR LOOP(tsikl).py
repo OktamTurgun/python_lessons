@@ -99,34 +99,30 @@ Created on Thu Jun  6 09:39:18 2024
 
 #print(dostlar)    
 #print(f"BU sizning d'stlaringiz ro'yxati: {dostlar.title()}") 
+'''
+Kodni tahlil qilamiz:
 
-# Kodni tahlil qilamiz:
+1-qatorda bo'sh dostlar ro'yxatini yaratdik
 
-# 1-qatorda bo'sh dostlar ro'yxatini yaratdik
+2-qatorda ekranga "5 ta eng yaqin do'stingiz kim?" degan xabarni chiqardik
 
-# 2-qatorda ekranga "5 ta eng yaqin do'stingiz kim?" degan xabarni chiqardik
+3-qatorda tsiklni boshladik. range(5) funktsiyasi 0 dan 5 gacha sonlar 
+ketma-ketligini yaratadi (0,1,2,3,4) tsikl esa n shularning har biriga teng bo'lib chiqquncha davom etadi. 
 
-# 3-qatorda tsiklni boshladik. range(5) funktsiyasi 0 dan 5 gacha sonlar 
-# ketma-ketligini yaratadi (0,1,2,3,4) tsikl esa n shularning har biriga teng bo'lib chiqquncha davom etadi. 
+4-qatorda tsikl badani kelgan. Bu yerda biz foydalanuvchidan n+1 do'stingizni 
+kiriting deb so'radik. Nima uchun n+1 (n emas)? Sababi n 0 dan 4 gacha qiymatlarni oladi, foydalanuvchiga tushunarli bo'lishi uchun esa biz "0-do'stingizni ismini kiriting:" deb emas, balki n+1 ya'ni 1-ismni kiriting deb murojat qilyapmiz.
 
-# 4-qatorda tsikl badani kelgan. Bu yerda biz foydalanuvchidan n+1 do'stingizni 
-# kiriting deb so'radik. Nima uchun n+1 (n emas)? Sababi n 0 dan 4 gacha qiymatlarni oladi, foydalanuvchiga tushunarli bo'lishi uchun esa biz "0-do'stingizni ismini kiriting:" deb emas, balki n+1 ya'ni 1-ismni kiriting deb murojat qilyapmiz.
+5-qatorda shakllangan ro'yxatni konsolga chiqardik.  
 
-# 5-qatorda shakllangan ro'yxatni konsolga chiqardik.  
+for tsikli har qanday dasturlash tilining eng muhim qismlaridan hisoblanadi 
+va biz bu operatoraga hali takror-takror qaytamiz. 
+'''
 
-# for tsikli har qanday dasturlash tilining eng muhim qismlaridan hisoblanadi 
-# va biz bu operatoraga hali takror-takror qaytamiz. 
-
-### A M A L I Y O T
-
-
-
-
-    
-##################################################
-# Multiplication table (from 1 to 10) in Python
-
-#num = 2
+"""
+Practice
+Multiplication table (from 1 to 10) in Python
+"""
+# num = 2
 
 # To take input from the user
 # num = int(input("Display multiplication table of? "))
@@ -186,3 +182,45 @@ Created on Thu Jun  6 09:39:18 2024
 #for n in range(show):
 #    shows.append(input(f"Bugungi o'ynagan {n+1}- spektakliz? "))
 #print(shows)    
+
+
+# mexmonlar = ["Ali", "Olim", "Shokir", "Bobur", "Mirzo", "Mustafo"]
+# for mexmon in mexmonlar:
+#     print("Salom", mexmon)
+    
+# friends = ["Alisher", "Kamron", "Bekzod", "Jasur", "qobil", "Jobir"]
+# for friend in friends:
+#     print(f"Xurmatli do'stim {friend}, sizni 22-dekabr kuni nahorga oshga taklif qilaman!")
+#     print("Xurmat bilan, Sattorovlar oilasi\n")
+
+# numbers = list(range(2,10))
+# for num in numbers:
+#     print(f"{num} ning kvadrati {num*2} ga teng\n")
+    
+# Karra jadvali
+
+# numbers = list(range(2, 10))
+# for num in numbers:
+#     for i in range(2, 10):
+#         print(f"{num} X {i} = {num * i}")
+#     print()  # Har bir son uchun bo'sh qator qo'shamiz
+
+  # Karra jadvali  variant 2
+# for num in range(2, 10):
+#     print(f"\n{num} karra jadvali:")
+#     for i in range(2, 10):
+#         print(f"{num} x {i} = {num * i}")
+
+# sonlar = list(range(11))
+# sonlar_kvadrati = []
+# for son in sonlar:
+#     sonlar_kvadrati.append(son**2)
+# print(sonlar)
+# print(sonlar_kvadrati)
+
+dostlar = []
+print("5 ta eng yaqin do'stingiz kim?")
+for n in range(5):
+    dostlar.append(input(f"{n+1}-do'stingiz ismini kiriting: ").title())
+# print('\n' .join(dostlar))
+print(*dostlar, sep=', ')
