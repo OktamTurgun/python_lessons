@@ -1,4 +1,4 @@
-# taomlar degan ro'yxat yarating va ichiga istalgan 5ta taomni kiriting
+# # taomlar degan ro'yxat yarating va ichiga istalgan 5ta taomni kiriting
 uzbek_foods = ["osh", "norin", "somsa", "kabob", "lag'mon", "sho'rva", "qaymoq va non", "issiq non", "gurochli bo'tqa", "tuxum"]
 
 # nonushta degan yangi ro'yxatga taomlardan nusxa oling
