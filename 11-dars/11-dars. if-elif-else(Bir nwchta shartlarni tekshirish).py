@@ -271,10 +271,148 @@ Dasturlash asoslari
 # Demak if royxat_nomi: ifodasi agar ro'yxatda bir dona element bo'lsa ham
 # TRUE qiymat qaytaradi, aks holda FALSE qiymatini qaytaradi. 
 
-# A M A L I Y O T
+"""Added new exercises"""
+# num = -2
+# if num<0:
+#     print("Manfiy son")
+# elif num == 0:
+#     print("Nol")
+# else:
+#     print("musbat son")
 
-#1.
+# print("Step into the wild – Welcome to the Zoo!")
+# age = int(input("How old are you?>>> ").strip())
+# if age<=7:
+#     price = 0
+# elif age <=16: # Aks holda, agar
+#     price = 10000
+# elif age >=60:
+#     price = 0
+# else: # Aks holda
+#     price = 25000
+# print(f"Sizga kirish: {price} so'm")
 
+'''OR operatori'''
+# day = input("What day is it today? ").strip().lower()
+# if day == "saturday" or day == "sunday":
+#     print("It's a rest day today.")
+# else:
+#     print("It's a workday today.")
 
-  
+'''AND operatori'''
+# day = input("What day is it today? ").lower().strip()
+# temp = float(input("What's the temperature outside? "))
+# if day == 'saturday' and temp >= 30:
+#     print("Let's go swimming!")
+# elif day == 'saturday' and temp < 30:
+#     print("We rest at home!")
+# else:
+#     print("Don’t forget, it’s time to get to work.")
+
+''''''    
+# age = int(input("How old are you? "))
+# is_student = input("Are you student? ").lower().strip()
+
+# if age >= 18 or is_student == 'yes':
+#     print("Chegirma mavjud!")
+# elif age >= 18 and is_student == 'yes':
+#     print("Oddiy narx!")
+# else:
+#     print("Kirish taqiqlanadi!")
+
+''''''    
+# weather = "sunny"
+# time = "afternoon"
+
+# if weather == "sunny" and time == "afternoon": 
+#     print("Parkga boramiz!") # Parkga boramiz! chiqadi Chunki 2 shart xam True
+# elif weather == "rainy" and time == "evening":
+#     print("Uyda kino ko'ramiz!")
+# else:
+#     print("Reja yo'q!")
     
+''''''
+# weather = "rainy"
+# time = "evening"
+
+# if weather == "sunny" or time == "evening":
+#     print("Kino ko'ramiz!")  # Chiqadimi?
+# elif weather == "rainy" and time == "evening":
+#     print("Uyda qolamiz!")   # Chiqadimi?
+
+''''''
+# day = input('What day is it today? ').lower().strip()
+# temp = float(input("What's the temperature outside? "))
+# if (day == "saturday" or day == "sunday") and temp >= 30:
+#     message = "Cho'milgani kettik!"
+# elif (day == "saturday" or day == 'sunday') and temp < 30:
+#     message = "Uyda dam olmiz!"
+# else:
+#     message = "Don't forget, it's time to get to work."
+# print(message)
+
+''''''
+# narh = 30000
+# choy = True
+# salat = False
+
+# if choy and salat:
+#     narh = narh + 10000
+# elif choy or salat:
+#     narh = narh + 5000
+    
+# print(f"Jami: {narh} so'm")
+
+''''''
+# narh = 25000
+# choy = 1
+# salat = 0
+# non = 1
+# kompot = 1
+# assorti = 1
+
+# if choy:
+#     print("Mijoz choy oldi.")
+#     narh = narh + 5000
+# if salat:
+#     print('Mijoz salat oldi.')
+#     narh = narh + 7000
+# if non:
+#     print("Mijoz non oldi.")
+#     narh = narh + 5000
+# if kompot:
+#     print("Mijoz kompot oldi")
+#     narh = narh + 8000
+# if assorti:
+#     print("Mijoz assorti oldi")
+#     narh = narh + 15000
+# print(f"Jami: {narh} so'm")
+
+'''in operatori'''
+# menu = ['osh', 'qozonkabob', 'norin', 'somsa', 'kabob', "lag'mon"]
+# ovqat = input("Nima ovqat yeysiz? ").lower().strip()
+# if ovqat in menu:
+#     print("Buyurtma qabul qilindi.")
+# else:
+#     print("Afsuski bizda bu taom qolmadi")
+    
+'''not in operatori'''
+# menu = ['osh', 'qozonkabob', 'norin', 'somsa', 'kabob', "lag'mon"]
+# ovqat = input("Nima ovqat yeysiz? ").lower()
+# if ovqat not in menu:
+#     print("Afsuski bizda bunday ovqat qolmadi")
+# else:
+#     print("Buyrtma qabul qilindi")
+    
+''''''
+menu = ['osh', 'qozonkabob', 'norin', 'somsa', 'kabob', "lag'mon", 'non']
+orders = ['osh', 'somsa', 'shashlik', 'non']
+
+if orders: # Ro'yxatda biror element bo'lsa bu ifoda True qaytaradi
+    for taom in orders:
+        if taom in menu:
+            print(f"Menuda {taom} bor")
+        else:
+            print(f"Kechirasiz menuda {taom} qolmadi.")
+else: # Aks holda ro'yxat bo'sh bo'lsa
+    print("Savatchangiz bo'sh")
