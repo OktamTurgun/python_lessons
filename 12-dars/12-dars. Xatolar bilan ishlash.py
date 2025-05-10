@@ -9,14 +9,16 @@ Created on Fri Jun 21 19:53:07 2024
 
 #print"Hello, World!"
 
-# EOL va EOF xatolik
+"""
+EOL va EOF xatolik
 
-# EOL (End of Line - qator yakuni) xatoligi sintaks xatolikning bir turi bo'lib, 
-# odatda qator oxirida qo'shtirnoq (birtirnoq) ni yopish esdan chiqqanda yuzaga keladi.
-#print("Hello, World!
+EOL (End of Line - qator yakuni) xatoligi sintaks xatolikning bir turi bo'lib, 
+odatda qator oxirida qo'shtirnoq (birtirnoq) ni yopish esdan chiqqanda yuzaga keladi.
+print("Hello, World!
       
-# EOF (End of function - funktsiya yakuni) xatoligi esa funktsiya oxirida qavsni yopish esdan chiqqanda yuzaga keladi.       
-#print("Assalomu aleykum"
+EOF (End of function - funktsiya yakuni) xatoligi esa funktsiya oxirida qavsni yopish esdan chiqqanda yuzaga keladi. 
+"""      
+# print("Assalomu aleykum"
 
 # IndetationError - SURISHDAGI XATOLAR
 
@@ -27,94 +29,110 @@ Created on Fri Jun 21 19:53:07 2024
 #print(n+1) #IndentationError: expected an indented block after 'for' statement on line 26
            # for siklida joytashlanmagan, bir xil joy tashlash kerak
 
-# RUN TIME ERROR - DASTURNI BAJARISHDA XATOLAR
+"""
+RUN TIME ERROR - DASTURNI BAJARISHDA XATOLAR
 
-# Run time error — dastur bajarish jarayonida kelib chiqadi va dasturning ishlashini 
-# to'xtatadi. Sintaks xatolikdan farqli ravishda Python bunday xatolarni dasturni 
-# bajarishdan avval aniqlay olmaydi. Run time error ning bir necha turi bor.
-# Keling, ulardan ba'zilari bilan tanishamiz.
+Run time error — dastur bajarish jarayonida kelib chiqadi va dasturning ishlashini 
+to'xtatadi. Sintaks xatolikdan farqli ravishda Python bunday xatolarni dasturni 
+bajarishdan avval aniqlay olmaydi. Run time error ning bir necha turi bor.
+Keling, ulardan ba'zilari bilan tanishamiz.
+"""
 
 # TypeError
 
-# Biror amalni (funktsiya, metod) noto'g'ri ma'lumot turi ustida bajarish.
+'''
+Biror amalni (funktsiya, metod) noto'g'ri ma'lumot turi ustida bajarish.
+'''
 
-#son = input("Istalgan son kiriting: ") # yoki son = int(son) deb yana bir qator qo'shishimiz kerak           
-#print(f"{son} ning kvadrati {son**2} ga teng") 
+son = input("Istalgan son kiriting: ") # yoki son = int(son) deb yana bir qator qo'shishimiz kerak           
+print(f"{son} ning kvadrati {son**2} ga teng") 
+
+'''
 # TypeError: unsupported operand type(s) for ** or pow(): 'str' and 'int'
 # foydalanuvchidan qabul qilgan sonimizni int ga o'tqazib olish esimizdan chiqdi
+'''
 
-#son = int(input("Istalgan son kiriting: ")) # bu xolatda yozsa xam bo'ladi            
-#print(f"{son} ning kvadrati {son**2} ga teng") 
+son = int(input("Istalgan son kiriting: ")) # bu xolatda yozsa xam bo'ladi            
+print(f"{son} ning kvadrati {son**2} ga teng") 
 
-# NameError - ma'lum bir o'zgaruvchi yoki funksiyani nomini xato yozib qo'yganda
-# yuz beradigan xatolar turidan biri
+'''
+NameError - ma'lum bir o'zgaruvchi yoki funksiyani nomini xato yozib qo'yganda
+yuz beradigan xatolar turidan biri
+'''
 
-#1
+# 1
 #prit("Hello, World!") # bu yerda print() funksiyasi xato yozildi
 
-#2
-#
-#mevalar = ['olma','anor','shaftoli','anjir']
-#for meva in mvalar: #NameError: name 'mvalar' is not defined
+# 2
+# mevalar = ['olma','anor','shaftoli','anjir']
+# for meva in mvalar: #NameError: name 'mvalar' is not defined
 #    print(meva)
 
-# ValueError
-# Noto'g'ri qiymat berib qo'yganimizda valueError kelib chiqadi
+'''
+ValueError
+Noto'g'ri qiymat berib qo'yganimizda valueError kelib chiqadi
+'''
 
-#son = int(input("Istalgan son kiriting: "))
-#if son>=0:
-#    print("Musbat son")
-#else:
-#    print("Manfiy son")
+son = int(input("Istalgan son kiriting: "))
+if son>=0:
+   print("Musbat son")
+else:
+   print("Manfiy son")
     
 # Natija:Istalgan son kiriting: 23.5
 # ValueError: invalid literal for int() with base 10: '23.5'    
 # istalgan (butun) son kiriting deb o'zgartirishimiz kerak yoki quyidagi xolatda
-#son = float(input("Istalgan son kiriting: "))# int ni float ga ya'ni butun sonni o'nlik songa
-#if son>=0:                                   # o'zgartirishimiz kerak
+
+# son = float(input("Istalgan son kiriting: "))# int ni float ga ya'ni butun sonni o'nlik songa
+# if son>=0:                                   # o'zgartirishimiz kerak
 #    print("Musbat son")
-#else:
+# else:
 #    print("Manfiy son")    
     
+'''
 # IndexError
-# Ya'ni ro'yxat elementlariga murojat qilishda indeksni noto'g'ri kiritish.    
+# Ya'ni ro'yxat elementlariga murojat qilishda indeksni noto'g'ri kiritish.
+'''    
 
-#mevalar = ['anor','uzum','bexi','anjir','olma']    
-#print(mevalar[5]) # IndexError: list index out of range. Noto'gri index berildi  
+mevalar = ['anor','uzum','bexi','anjir','olma']    
+print(mevalar[5]) # IndexError: list index out of range. Noto'gri index berildi  
 # Dasturlashda index 0 dan boshlanadi    
     
-# ZeroDivisionError - 0 ga bo'lish xalolari    
+'''# ZeroDivisionError - 0 ga bo'lish xalolari'''    
 
-#x, y = 50, 50    
-#z = 250/(x-y) # ZeroDivisionError: division by zero 0 ga bo'ldingiz , 0 ga bo'lib bo'lmaydi  
+x, y = 50, 50    
+z = 250/(x-y) # ZeroDivisionError: division by zero 0 ga bo'ldingiz , 0 ga bo'lib bo'lmaydi  
 
 #x, y = 60, 50 # shu xolatda to'g'ri bo'ladi  
 #z = 250/(x-y)    
    
-# MANTIQIY XATOLAR
-# Mantiqiy xatolar - dasturchi tomonidan yo'l qo'yilgan va kutilgan natijani berishda 
-# to'sqinlik qiluvchi xatolar. Bunday xatolar eng ko'p uchraydigan va aniqlash eng qiyin
-# bo'lgan xatolar hisoblanadi. Aksar holatlarda Python mantiqiy xatolarni aniqlamaydi
-# va dastur bajarilaveradi (lekin kutilgan natija chiqmaydi).
- 
-# Mantiqiy xatolar turli ko'rinishda bo'lishi mumkin, masalan sonlar bilan ishlashda:
+"""
+MANTIQIY XATOLAR
+Mantiqiy xatolar - dasturchi tomonidan yo'l qo'yilgan va kutilgan natijani berishda 
+to'sqinlik qiluvchi xatolar. Bunday xatolar eng ko'p uchraydigan va aniqlash eng qiyin
+bo'lgan xatolar hisoblanadi. Aksar holatlarda Python mantiqiy xatolarni aniqlamaydi
+va dastur bajarilaveradi (lekin kutilgan natija chiqmaydi).
 
-#radius = 5
-#pi = 4.14 # pi = 3.14159 bo'adi
-#aylana_yuzi = pi*radius**2
-#print(aylana_yuzi)
+Mantiqiy xatolar turli ko'rinishda bo'lishi mumkin, masalan sonlar bilan ishlashda:
+"""
+radius = 5
+pi = 4.14 # pi = 3.14159 bo'adi
+aylana_yuzi = pi*radius**2
+print(aylana_yuzi)
 
-#son = float(input("Istalgan son kiriting: "))
-#ildiz = son**1/2    
-#print(f"{son} ning ildizi {ildiz} ga teng")    
+son = float(input("Istalgan son kiriting: "))
+ildiz = son**1/2    
+print(f"{son} ning ildizi {ildiz} ga teng")    
 #  2-qatorda ildizni hisoblashda foydalanuvchi kiritgan son avval 1-darajaga oshirildi 
-# va undan keyin 2 ga bo'lindi. Kodni to'g'rilaymiz:
+#  va undan keyin 2 ga bo'lindi. Kodni to'g'rilaymiz:
     
-#son = float(input("Istalgan son kiriting: "))
-#ildiz = son**(1/2) # yoki ildiz = son**0.5 deb yozamiz   
-#print(f"{son} ning ildizi {ildiz} ga teng") 
+son = float(input("Istalgan son kiriting: "))
+ildiz = son**(1/2) # yoki ildiz = son**0.5 deb yozamiz   
+print(f"{son} ning ildizi {ildiz} ga teng") 
 
-# Noo'rin bo'sh joy qoldirish (yoki qoldirmaslik) ham mantiqiy xatoga olib kelishi mumkin:    
+'''
+Noo'rin bo'sh joy qoldirish (yoki qoldirmaslik) ham mantiqiy xatoga olib kelishi mumkin:
+'''    
 
 mevalar = ['anjir','olma','shaftoli','gilos','nok','xurmo']
 for meva in mevalar:
