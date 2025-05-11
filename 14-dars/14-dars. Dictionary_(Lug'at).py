@@ -179,8 +179,8 @@ python = {
     'title()':'matndagi xar bir soz birinchi xarfini katta bilan yozadi'
     }
 
-#alit = input("Kalit so'z kiriting: ").lower()
-#print(python.get(kalit,'Bunday atama mavjud emas'))
+# kalit = input("Kalit so'z kiriting: ").lower()
+# print(python.get(kalit,'Bunday atama mavjud emas'))
 
 kalit = input("Kalit so'z kiriting: ").lower()
 tarjima = python.get(kalit)
