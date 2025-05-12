@@ -4,7 +4,7 @@ Python izohli lu'gati tuzing: Lug'atga shu kunga qadar o'rgangan 10 ta so'z
 va har birining qisqacha tarjimasini yozing.
 """
 
-python = {
+python_dict = {
     # Asosiy tushunchalar
     'string': "matn (har qanday qo'shtirnoq ichidagi ifoda)",
     'integer': 'butun son',
@@ -40,7 +40,7 @@ python = {
     '.capitalize()': "matnning birinchi harfini katta bilan yozadi",
     '.strip()': "matn boshi va oxiridagi bo'shliqlarni olib tashlaydi",
     '.split()': "matnni bo'lib ro'yxatga aylantiradi",
-    '.join()': "ro'yxat elementlarini matnga birlashtiradi",
+    'join': ".join() metodi - ro'yxat elementlarini matnga birlashtiradi",
     
     # List metodlari
     '.append()': "ro'yxat oxiriga element qo'shish",
@@ -75,3 +75,55 @@ python = {
     'TypeError': "noto'g'ri turdagi qiymat",
     'try-except': "xatoliklarni qo'llab-quvvatlash bloki"
 }
+
+"""
+Foydalanuvchidan biror so'z kiritishni so'rang va so'zning tarjimasini
+yuqoridagi lug'atdan chiqarib bering. Agar so'z lu'gatda mavjud bo'lmasa,
+"Bunda so'z mavjud emas" degan xabarni chiqaring.
+"""
+# kalit = input("Kalit so'z kiriting? ").lower()
+# print(python_dict.get(kalit, "Bunday so'z mavjud emas!").capitalize())
+
+# kalit = input("Kalit so'z kiriting? ")
+
+# meaning = python_dict.get(kalit)
+# if meaning == None:
+#   print("Bunday so'z mavjud emas!")
+# else:
+#   print(f"{kalit.title()} {meaning}")
+
+
+""" Ushbu kodni optimal ko'rinishi """
+
+print("Python lug'atiga xush kelibsiz! (chiqish uchun 'exit' deb yozing)")
+
+while True:
+  kalit = input(" \nKalit so'z kiriting: ").strip().lower()
+
+  if kalit == 'exit':
+    print("dastur to'xtatildi!")
+    break
+
+  # Agar foydalanuvchi so'z kiritmasa
+  if not kalit:
+    print("Iltimos, so'z kiriting: ")
+    continue
+
+  # Barcha variantlarni bir vaqtda tekshirish
+  variants = [kalit, f'.{kalit}', f'{kalit}()', f'.{kalit}()']
+  found = False
+  
+  for variant in variants:
+      if variant in python_dict:
+          print(f"\n{variant.upper()}: \n{python_dict[variant].capitalize()}")
+          found = True
+          break
+  
+  if not found:
+      print(f"\n'{kalit}' so'zi topilmadi!")
+      
+      # Qo'shimcha yordam
+      similar = [word for word in python_dict.keys() if kalit in word]
+      if similar:
+          print(f"Shu so'zlarga o'xshashlar: {', '.join(similar[:3])}")
+    
