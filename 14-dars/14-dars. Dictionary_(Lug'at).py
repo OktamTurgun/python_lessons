@@ -182,13 +182,128 @@ python = {
 # kalit = input("Kalit so'z kiriting: ").lower()
 # print(python.get(kalit,'Bunday atama mavjud emas'))
 
-kalit = input("Kalit so'z kiriting: ").lower()
-tarjima = python.get(kalit)
-print(python.get(kalit))
-if tarjima==None:
-    print(f"Bunday so'z {tarjima} mavjud emas!")
-else:
-    print(f"{kalit.title()} so'zi {tarjima} deb tarjima qilinadi")    
+# kalit = input("Kalit so'z kiriting: ").lower()
+# tarjima = python.get(kalit)
+# print(python.get(kalit))
+# if tarjima==None:
+#     print(f"Bunday so'z {tarjima} mavjud emas!")
+# else:
+#     print(f"{kalit.title()} so'zi {tarjima} deb tarjima qilinadi") 
+
+car_0 = {
+    'model': 'ferrari',
+    'rang': 'qizil'
+    }
+# print(car_0['model'])
+# print(car_0['rang'])
+
+en_uz = {
+    'apple': 'olma',
+    'apricot': "o'rik",
+    'banana': 'banan'
+    }
+# print(en_uz['apple'])
+
+fruits = {
+    'olma': 15000,
+    'tarvuz': 12000,
+    'qovun': 16000,
+    'gilos': 23000
+    }
+# print(f"Olma narhi: {fruits['olma']} so'm")
+
+
+fruits['anor'] = 18000 # Lug'atga yangi element qo'shish
+# print(fruits)
+
+fruits['qovun'] = 13000 # Elementni o'zgartirish
+# print(fruits)
+
+del fruits['gilos'] # Elementni o'chirish
+# print(fruits)
+
+# Ro'yxatdagi elementlarga murojaat qilishda .get() methodidan foydalanish tavsiya etiladi 
+# chunki xavfsiz, xatoliklarni oldini oladi
+# print(fruits.get('olma', 'Bunday meva yo\'q'))
+
+student_0 = {
+    'id': 23479,
+    'email': 'ali@Example.com',
+    'name': 'Ali Murod',
+    'age': 24,
+    'birth_year': 2002,
+    'status': 'active'
+    }
+# print(f"{student_0['name'].title()},\
+#  {student_0['birth_year']}-yilda tug'ilgan,\
+#  {student_0['age']} yoshda,\
+#  id raqami: {student_0['id']}")
+
+# Alternativ yondashuv (get() methodi yordamida):
+# print(f"{student_0.get('id')}, {student_0.get('email')}, {student_0.get('name')}, {student_0.get('status')}")
+
+# Bitta qatorda chiqarish uchun join() bilan
+# print('\n' .join(f"{key}: {value}" for key, value in student_0.items()))
+
+# oddiy for loop bilan chiqarish 
+# for key, value in student_0.items():
+    # print(f"{key}: {value}")
+    
+# Ushbu lug'atga yangi element qo'shish
+student_0['address'] = '234 wall street'
+student_0['languages'] = 'Python, JavaScript'
+student_0['hobbies'] = ['football, tennis, swimming']
+# print(student_0)
+
+# Ushbu lug'atdagi elementlarni o'zgartirish 1- usul
+student_0['address'] = '202 new street' 
+student_0['age'] = 30 
+student_0['name'] = 'Rustam Kamol' 
+student_0['birth_year'] = 1995 
+
+# Ushbu lug'atdagi elementlarni o'zgartirish 2- usul
+updates = {
+    'address': '202 new street',
+    'age': 30,
+    'name': 'Rustam Kamol',
+    'birth_year': 1995
+    } 
+student_0.update(updates)
+
+# Ma'lumotlari chiroyliroq ko'rsatish uchun misol:
+print('\nStudant information:')
+print("_" * 20)
+for key, value in student_0.items():
+    if isinstance(value, list):
+        print(f"{key.title()}: {', '.join(value)}")
+    else:
+        print(f"{key.title()}: {value}")
+
+# .get() methodi lug'atni ichidan ma'lum bir elementni olish uchun ishlatiladi
+
+print(student_0.get('yosh', "Yosh topilmadi"))  
+
+''' Dinamik to'ldirishda (masalan, foydalanuvchi kiritishiga qarab): '''
+# student_0 = {}  # Boshlang'ich lug'at
+fields = ['hobbies', 'skills', 'address']
+
+for field in fields:
+    # Foydalanuvchidan ma'lumotni olish va listga aylantirish
+    value = input(f"Enter your {field}: ").strip()
+    
+    # Agar vergul bilan ajratilgan qiymatlar kiritilsa, ularni listga aylantiramiz
+    if ',' in value:
+        student_0[field] = [item.strip() for item in value.split(',')]
+    else:
+        student_0[field] = value
+
+# Natijani chiqarish
+print("\nKiritilgan ma'lumotlar:")
+for key, value in student_0.items():
+    if isinstance(value, list):  # Agar qiymat list bo'lsa
+        print(f"{key}: {', '.join(value)}")
+    else:
+        print(f"{key}: {value}")
 
 
 
