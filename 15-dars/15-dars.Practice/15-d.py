@@ -32,3 +32,15 @@ for buyurtma in buyurtmalar:
     print(f"Kechirasiz, bizda {buyurtma} qolmadi.")
 
 ''' Yuqoridagi kodni yanada optimallashgan ko'rinishga olib kelamiz '''
+
+print("3 ta taom buyurtma bering (vergul bilan ajratib kiriting):")
+buyurtmalar = input().strip().lower().split(",")[:3] # [:3] orqali faqat dastlabki 3 ta taomni saqlaymiz
+
+# Xar bir buyurtmani loop yordamida tekshiramiz
+for buyurtma in buyurtmalar:
+    buyurtma = buyurtma.strip() # Har bir taomning bosh va oxiridagi bo'sh joylarini olib tashlaymiz
+    narx = menu.get(buyurtma) # menu.get(buyurtma) yordamida menu lug'atidan taom narxini olamiz va xatolarni oldini oldik, 
+    if narx: # Agar narx mavjud bo'lsa (taom menyuda bo'lsa)
+        print(f"{buyurtma.title()}: {narx} so'm")
+    else:
+        print(f"Kechirasiz, bizda {buyurtma} qolmadi.")
