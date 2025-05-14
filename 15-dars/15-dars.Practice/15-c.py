@@ -24,7 +24,7 @@ countries = {
   "Nigeria": "Abuja",
   "Oman": "Muscat",
   "Peru": "Lima",
-  "Brazil": "Brasilia",
+  "Brazil": "Brasilia"
 }
 
 davlat = input("Istalgan davlatni yozing va poytaxtini bilib oling: ").strip().title()

@@ -23,7 +23,7 @@ countries = {
   "Nigeria": "Abuja",
   "Oman": "Muscat",
   "Peru": "Lima",
-  "Brazil": "Brasilia",
+  "Brazil": "Brasilia"
 }
 print("Dunyo davlatlari:")
 for country in sorted(countries.keys()):
