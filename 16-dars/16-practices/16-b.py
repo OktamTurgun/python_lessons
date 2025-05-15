@@ -32,18 +32,18 @@ imom_muslim = {
     "qayerdan": "Nishopur (hozirgi Eron)",
 }
 
-# popular_people = [buhoriy, navoiy, gazzoliy, imom_muslim]
-# for people in popular_people:
-#   print(f"Ism sharif: {people['ism_sharif']}\n"
-#         f"Mashhur asarlari:  {people['mashxur_asarlari']}\n")
+popular_people = [buhoriy, navoiy, gazzoliy, imom_muslim]
+for people in popular_people:
+  print(f"Ism sharif: {people['ism_sharif']}\n"
+        f"Mashhur asarlari:  {people['mashxur_asarlari']}\n")
   
-# # Example 2
-# popular_people = [buhoriy, navoiy, gazzoliy, imom_muslim]
-# for people in popular_people:
-#   malumot = f"""{'='*50}\nIsm Sharif: {people['ism_sharif']}\nMashhur asarlari: {people['mashxur_asarlari']}\n{'='*50}"""
-#   print(malumot)
+# Example 2
+popular_people = [buhoriy, navoiy, gazzoliy, imom_muslim]
+for people in popular_people:
+  malumot = f"""{'='*50}\nIsm Sharif: {people['ism_sharif']}\nMashhur asarlari: {people['mashxur_asarlari']}\n{'='*50}"""
+  print(malumot)
 
-# # Example 3  
+# Example 3  
 popular_people = [buhoriy, navoiy, gazzoliy, imom_muslim]
 for person in popular_people:
   print("\n" + "="*50)
@@ -54,9 +54,9 @@ for person in popular_people:
     print(work)
 
 # Example 4    
-# popular_people = [buhoriy, navoiy, gazzoliy, imom_muslim]
-# for person in popular_people:
-#     print("\n" + "=" * 50)
-#     print(f"{person['ism_sharif']} mashxur asarlari:")
-#     for work in person['mashxur_asarlari']:
-#         print(f"- {work}")
+popular_people = [buhoriy, navoiy, gazzoliy, imom_muslim]
+for person in popular_people:
+    print("\n" + "=" * 50)
+    print(f"{person['ism_sharif']} mashxur asarlari:")
+    for work in person['mashxur_asarlari']:
+        print(f"- {work}")
