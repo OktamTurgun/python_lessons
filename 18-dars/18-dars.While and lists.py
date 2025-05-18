@@ -94,7 +94,7 @@ while students:
     graded_students[student] = grade
 
 print("\n=== Grading Results ===")
-for student in sorted(graded_students):  # Sort alphabetically
+for student in sorted(graded_students):
     print(f"{student.title():<10} - Grade: {graded_students[student]:>3}")
 
 # Additional statistics
