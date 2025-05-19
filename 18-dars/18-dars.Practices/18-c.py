@@ -58,26 +58,4 @@ else:
       print(f"{order.title()} - {products[order]} so'm")
     else:
       print(f"Afsuski, bizda {order.capitalize()} qolmadi!")
-
-  
-
-    
-# buyurtmalar = []
-
-# print("Mahsulotlarni kiriting (tugatish uchun 'stop' deb yozing):")
-# while True:
-#     buyurtma = input("Mahsulot nomi: ").lower()
-#     if buyurtma == 'stop':
-#         break
-#     buyurtmalar.append(buyurtma)
-
-# if not buyurtmalar:
-#     print("Siz hech qanday mahsulot buyurtma bermadingiz!")
-# else:
-#     print("\nBuyurtmalaringiz:")
-#     for buyurtma in buyurtmalar:
-#         if buyurtma in products:
-#             print(f"{buyurtma.title()} - {products[buyurtma]} so'm")
-#         else:
-#             print(f"Bizda {buyurtma.title()} qolmadi")  
   
