@@ -30,6 +30,9 @@ def bolinish_alomatlari(son):
             print(f"{son} {n} ga qoldiqsiz bo'linadi")
 
 bolinish_alomatlari(20)
+bolinish_alomatlari(42)
+bolinish_alomatlari(126)
+bolinish_alomatlari(13)
 
 ''''''
 def divide(num):
