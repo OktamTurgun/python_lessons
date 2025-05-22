@@ -23,7 +23,11 @@ Ba'zi argumentlarni kiritishni ixtiyoriy qiling (masalan, tel.raqam, el.manzil)
 #         user['tel'] = tel
 #     return user
 
-
+'''
+Yuqoridagi funksiyani while yordamida bir necha bor chaqiring, 
+va mijozlar degan ro'yxatni shakllantiring. Ro'yxatdagi mijozlar
+haqidagi ma'lumotni konsolga chiqaring.
+'''
 # print("Mijoz haqida ma'lumot kiriting:\n")
 # users = []
 # while True:
