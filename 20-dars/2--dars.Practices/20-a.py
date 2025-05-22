@@ -7,6 +7,7 @@ Ba'zi argumentlarni kiritishni ixtiyoriy qiling (masalan, tel.raqam, el.manzil)
 # variant 1
 
 # def user_info(ism, familiya, yosh, tugilgan_yil, tugilgan_joy, email=None, tel=None):
+#     """Foydalanuvchi ma'lumotlarini lug'at ko'rinishida qaytaradi"""
 #     user = {
 #         'ism':ism,
 #         'familiya':familiya,
