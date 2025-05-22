@@ -23,3 +23,17 @@ def list_sum(numbers):
     return total    
 print(list_sum([12, 5, 23, 9, 43, 27, 3]))    
 print(list_sum([1, 2, 3, 4, 5])) 
+
+''''''
+# Oraliqdagi sonlar: Berilgan oraliqdagi sonlarni qaytaruvchi funksiya yozing.
+# Masalan, oraliq(0, 11, 2) funksiyasi 0 dan 10 gacha bo'lgan sonlarni  
+def oraliq(min, max, step=1):
+    """Berilgan oraliqdagi sonlarni qaytaruvchi funksiya."""
+    sonlar = []
+    while min <= max:
+      sonlar.append(min)
+      min += step
+    return sonlar
+
+print(oraliq(0, 11, 2))
+    
