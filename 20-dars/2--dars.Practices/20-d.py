@@ -7,10 +7,10 @@ Berilgan oraliqdagi tub sonlar ro'yxatini qaytaruvchi funksiya yozing
 def tub_sonlar(min, max):
     """Berilgan oraliqdagi tub sonlar ro'yxatini qaytaruvchi funksiya."""
     tub_sonlar = []
-    for num in range(min, max + 1):
+    for num in range(min, max + 1): # 1 dan kichik sonlarni o'tkazib yuboramiz
         if num > 1:  # 1 dan katta sonlarni tekshiramiz
-            for i in range(2, int(num ** 0.5) + 1):
-                if num % i == 0:
+            for i in range(2, int(num ** 0.5) + 1): # faqat kvadrat ildizigacha tekshiramiz
+                if num % i == 0: 
                     break
             else:
                 tub_sonlar.append(num)

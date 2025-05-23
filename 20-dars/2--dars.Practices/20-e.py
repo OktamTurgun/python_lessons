@@ -16,10 +16,15 @@ print(fibonacci(10))  # [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
 def fibonachchi(number):
     """Fibonachchi ketma-ketligidagi n ta sonni qaytaruvchi funksiya."""
     sonlar = []
+    ## Fibonachchi ketma-ketligining dastlabki ikkita sonini belgilaymiz
+    ## 0 va 1
     a, b = 0, 1
+    ## Fibonachchi ketma-ketligidagi sonlarni hisoblaymiz
+    ## va ro'yxatga qo'shamiz
     for _ in range(number):
         sonlar.append(a)
-        a, b = b, a + b
+        a, b = b, a + b # a ga b ni, b ga a + b ni tenglaymiz
+    ## Fibonachchi ketma-ketligidagi sonlarni qaytaramiz
     return sonlar
 print(fibonachchi(10))  # [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
 
