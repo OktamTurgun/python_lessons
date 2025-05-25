@@ -103,7 +103,7 @@ malumotlar(kompaniya="BYD", model="Song", rang="qizil", yil=2024, narh=23000)
 malumotlar(ism="Rustam", yosh=30, shahar="Toshkent", til="uzbek", kasb="Dasturchi")
 
 ''''''
-*args va **kwargs ni birgalikda ishlatish
+# *args va **kwargs ni birgalikda ishlatish
 def funk(*args, **kwargs):
     print("Pozitsionlar:", args)
     print("Kalit-qiymatlar:", kwargs)
