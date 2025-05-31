@@ -155,7 +155,7 @@ def main():
         users.append(user_info(ism, familiya, yosh, tugilgan_yil, tugilgan_joy, email, tel))
         
         javob = input("\nDavom etasizmi? (ha/yo'q): ").lower()
-        if javob not in ('ha', 'yes', "yo'q", 'no'):
+        if javob not in ('ha', 'yes'):
             break
     
     print("\nMijozlarimiz haqida ma'lumotlar:")
