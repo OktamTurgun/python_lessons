@@ -24,3 +24,13 @@ print(result)  # Natija: 60
 
 f4 = lambda x: x**2  # Sonni kvadratga oshiruvchi lambda funksiyasi
 son_kvadrati = f4(7)  # Natija: 49
+
+# maxsulotlar narhiga soliq qo'shish
+prices = [100, 200, 150, 300]
+taxed = list(map(lambda p: round(p * 1.15, 2), prices))
+print(taxed)  # # Natija: [115.0, 230.0, 172.5, 345.0]
+
+# ichki ro'yxatni yig'indisini hisoblash
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+row_sums = list(map(sum, matrix))
+print(row_sums)  # [6, 15, 24]
