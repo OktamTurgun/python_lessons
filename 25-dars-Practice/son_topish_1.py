@@ -6,14 +6,15 @@ Created on Tue Jun 3 11:00:14 2025
 @author: uktam
 """
 
-"""
-# Ushbu dasturda coputer 1 dan 10 gacha tasodifiy son o'ylaydi user topishga urunib ko'radi
-# keyin user 1 dan 10 gach ason oylaydi comp topishga urunib koradi, xar safar imkoiyatlar necha marta urunib korgani xisoblab boriladi va topgandan keyin "siz n marta urunib topdingiz" deb chiqariladi, xar bir tompon bir martadan oynagandan keyin yana so'raydi yana oynaymizmi? (ha/yo'q) deb, agar xa bolsa davom etadi, yo'q bo'lsa o'yin tugaydi va durrang boldi yoki siz yutdingiz deb chiqadi, qaysi tomon ko'proq urinish qilsa o'sha tomon yutadi, agar urinishlar soni bir xil bo'lsa durrang deb chiqadi
-"""
 import random
 
 
 def user_guess():
+    """
+    Foydalanuvchi 1 dan 10 gacha son o'ylaydi va topishga urunadi.
+    Returns:
+        attempts (int): Foydalanuvchining sonni topish uchun sarflagan urinishlari soni
+    """
     komp_son = random.randint(1, 10)
     attempts = 0
     while True:

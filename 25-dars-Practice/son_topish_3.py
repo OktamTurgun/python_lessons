@@ -2,6 +2,12 @@ import random
 
 
 def son_top(x=10):
+    """Foydalanuvchi kompyuter o'ylagan sonni topuvchi funksiya
+    args:
+        x (int): Foydalanuvchi o'ylagan sonning maksimal qiymati
+    return:
+        taxminlar (int): Foydalanuvchining sonni topish uchun sarflagan taxminlari soni
+    """
     tasodifiy_son = random.randint(1, x)
     print(f"Men 1 dan {x} gacha son o'yladim topa olasizmi?")
     taxminlar = 0
