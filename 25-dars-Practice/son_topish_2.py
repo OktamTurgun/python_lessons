@@ -21,13 +21,20 @@ MAX_NUMBER = 10
 
 
 def get_valid_input(prompt, input_type=int, valid_range=None):
-    """Foydalanuvchi kiritishini tekshiradi"""
+    """Foydalanuvchi kiritishini tekshiradi
+    Args:
+        prompt (str): Foydalanuvchidan kiritishni so'rash matni
+        input_type (type): Kiritish turini belgilaydi (int, str va h.k.)
+        valid_range (tuple): Ixtiyoriy, kiritiladigan sonning ruxsat etilgan oralig'i
+    Returns:
+        user_input (int/str): Foydalanuvchi kiritgan to'g'ri formatdagi qiymat
+    """
     while True:
         try:
-            user_input = input_type(input(prompt))
+            user_input = input_type(input(prompt))  # Foydalanuvchi kiritishini olish
             if valid_range and (
                 user_input < valid_range[0] or user_input > valid_range[1]
-            ):
+            ):  # Kiritilgan qiymatni tekshirish
                 print(
                     f"Iltimos {valid_range[0]}-{valid_range[1]} oralig'ida son kiriting."
                 )
@@ -38,7 +45,10 @@ def get_valid_input(prompt, input_type=int, valid_range=None):
 
 
 def user_guess():
-    """Foydalanuvchi kompyuter sonini topadi"""
+    """Foydalanuvchi kompyuter sonini topadi
+    Returns:
+        attempts (int): Foydalanuvchining sonni topish uchun sarflagan urinishlari soni
+    """
     komp_son = random.randint(MIN_NUMBER, MAX_NUMBER)
     attempts = 0
     print(
@@ -60,7 +70,10 @@ def user_guess():
 
 
 def comp_guess():
-    """Kompyuter foydalanuvchi sonini topadi"""
+    """Kompyuter foydalanuvchi sonini topadi
+    Returns:
+        attempts (int): Kompyuterning sonni topish uchun sarflagan urinishlari soni
+    """
     print(f"\nEndi siz {MIN_NUMBER}-{MAX_NUMBER} oralig'ida son o'ylang (kiritmang).")
     input("O'ylab bo'lganingizdan so'ng Enter ni bosing...")
     attempts = 0
@@ -68,7 +81,9 @@ def comp_guess():
 
     while True:
         attempts += 1
-        guess = (low + high) // 2  # Binary search algoritmi
+        guess = (
+            low + high
+        ) // 2  # Binary search algoritmi, o'rtadagi sonni taxmin qilish va tezroq topish
         print(f"\n{attempts}-urinish. Kompyuter taxmini: {guess}")
 
         response = get_valid_input(
@@ -87,7 +102,10 @@ def comp_guess():
 
 
 def play_round():
-    """Bitta o'yin raundini o'ynaydi"""
+    """Bitta o'yin raundini o'ynaydi
+    Returns:
+        winner (str): Raund g'olibi ('user', 'comp' yoki 'draw')
+    """
     print("\n=== YANGI RAUND ===")
 
     print("\n[Foydalanuvchi topish bosqichi]")
@@ -108,7 +126,9 @@ def play_round():
 
 
 def play_game():
-    """Asosiy o'yin funksiyasi"""
+    """Asosiy o'yin funksiyasi
+    Bu funksiya foydalanuvchi va kompyuter o'rtasida bir nechta raundlarni o'ynaydi
+    """
     scores = {"user": 0, "comp": 0, "draw": 0}
 
     print(

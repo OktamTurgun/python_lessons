@@ -37,6 +37,11 @@ def user_guess():
 
 
 def comp_guess():
+    """
+    Kompyuter foydalanuvchi o'ylagan sonni topishga urunadi.
+    Returns:
+        attempts (int): Kompyuterning sonni topish uchun sarflagan urinishlari soni
+    """
     print("\nEndi siz 1 dan 10 oralig'ida son o'ylang (Lekin kiritmang!).")
     input("O'ylab bolganingizdan keyin Enter tugmasini bosing...")
     attempts = 0
@@ -65,6 +70,10 @@ def comp_guess():
 
 
 def play_game():
+    """
+    O'yin jarayonini boshqaruvchi funksiya.
+    Foydalanuvchi va kompyuter o'rtasida son topish o'yinini o'tkazadi.
+    """
     user_wins = 0
     comp_wins = 0
     while True:

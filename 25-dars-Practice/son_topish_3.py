@@ -60,7 +60,12 @@ def son_top_pc(x=10):
 
 
 def play_game(x=10):
-    """Foydalanuvchi va kompyuter o'rtasida son topish o'yini"""
+    """Foydalanuvchi va kompyuter o'rtasida son topish o'yini
+    args:
+        x (int): Foydalanuvchi o'ylagan sonning maksimal qiymati
+    return:
+        None
+    """
     print("=== SON TOPISH O'YINI ===")
     yana_oynaymizmi = True
     user_wins = 0
