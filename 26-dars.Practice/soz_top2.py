@@ -57,6 +57,10 @@ def play_game():
         print("\n" + show_hint(game["secret_word"], game["correct_letters"]))
         print(f"Urinishlar: {game['attempts']}/{game['max_attempts']}")
 
+        # FOYDALANUVCHI KIRITGAN HARFLARNI KO'RSATISH
+        if game["guessed_letters"]:
+            print("\nKiritilgan harflar:", ", ".join(sorted(game["guessed_letters"])))
+
         if is_game_won(game["secret_word"], game["correct_letters"]):
             print(
                 f"\n🎉 Tabriklayman! Siz {game['secret_word']} so‘zini {game['attempts']} urinishda topdingiz!"
