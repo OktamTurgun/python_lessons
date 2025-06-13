@@ -36,6 +36,9 @@ class Avtosalon:
     def __str__(self):
         """Avtosalon haqida asosiy ma'lumot"""
         return f"{self.nomi} avtosalon, manzili: {self.manzili}"
+      
+def show_methods(klass):
+    return [method for method in dir(klass) if method.startswith("__") is False]
 
 # Klassni tekshirish
 if __name__ == "__main__":
@@ -64,4 +67,6 @@ if __name__ == "__main__":
     
     print("\nint klassining metodlari:")
     print(dir(int))
+    
+print(show_methods(Avtosalon))
     
