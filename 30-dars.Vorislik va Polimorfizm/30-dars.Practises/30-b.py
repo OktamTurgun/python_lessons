@@ -60,13 +60,13 @@ class Student(Shaxs):
     if fan not in self.fanlar:
       self.fanlar.append(fan)
     else:
-      print(f"Siz {self.nomi} bu fanga yozilgansiz!")
+      print(f"Siz {fan.nomi} faniga yozilgansiz!")
       
   def remove_fan(self,fan):
     if fan in self.fanlar:
       self.fanlar.remove(fan)
     else:
-      print("Siz bu fanga yozilmagansiz!")
+      print(f"Siz bu {fan.nomi} faniga yozilmagansiz!")
   
 class Manzil:
   """manzil saqlash uchu class"""
@@ -82,7 +82,7 @@ class Manzil:
     if 'shahar' in self.viloyat.lower():
         hudud = self.viloyat  # Masalan: Toshkent shahri
     else:
-        hudud = f"{self.viloyat} viloyati"  # Masalan: Andijon viloyati
+        hudud = f"{self.viloyat} viloyati" 
         
     manzil = f"Manzil: {hudud}, {self.tuman} tumani, "
     manzil += f"{self.kocha} ko'chasi, {self.uy}-uy"
@@ -111,6 +111,7 @@ student1.remove_fan(biologiya)  # => Siz bu fanga yozilmagansiz.
 
 # Fizika fanini o‘chiramiz
 student1.remove_fan(fizika)
+student1.fanga_yozil(matematika)
 
 # Yana ma'lumotlarni ko‘ramiz
 print(student1.get_info())  # Endi faqat Matematika qoladi  
