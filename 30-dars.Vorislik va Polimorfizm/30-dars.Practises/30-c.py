@@ -9,6 +9,8 @@ Voris klasslardan yana boshqa voris klass yaratib ko'ring. Misol uchun Foydalanu
 
 Admin klassiga foydalanuvchida yo'q yangi metodlar yozing, masalan, ban_user() metodi konsolga "Foydalanuvchi bloklandi" degan matn chiqarsin.
 """
+import datetime
+
 class Shaxs:
   """Shaxslar haqida ma'lumot"""
   def __init__(self,ism,familiya,passport,tyil):
@@ -23,9 +25,11 @@ class Shaxs:
     info += f"Passport: {self.passport}, {self.tyil}-yilda tug'ilgan"
     return info
   
-  def get_age(self,yil):
+  def get_age(self):
     """Shaxsning yoshini qaytaruvchi method"""
-    return f"Yosh: {yil - self.tyil}"
+    joriy_yil = datetime.datetime.now().year
+    
+    return f"Yosh: {joriy_yil - self.tyil}"
   
 class Professor(Shaxs):
   def __init__(self,ism,familiya,passport,tyil,specialty,academic_degree):
@@ -49,8 +53,8 @@ class User(Shaxs):
     info += f", Username: {self.username}, Email: {self.email}."
     return info
   
-  def get_age(self, yil):
-    return super().get_age(yil)
+  def get_age(self):
+    return super().get_age()
   
 class Admin(User):
   def __init__(self,ism,familiya,passport,tyil,username,email,privilages=None):
@@ -73,7 +77,7 @@ class Admin(User):
 user1 = User("Ali","Valiyev","AB232345",1988,"ali1988valiyev","Example@gmail.com")
 admin1 = Admin("Hasan","Husanov","AD123456",2005,"hasan123456","Example@7gmail.com",["ban", "edit", "delete"])
 print(user1.get_info())
-print(user1.get_age(2025))
+print(user1.get_age())
 print(admin1.get_info())
 admin1.ban_user(user1) # Foydalanuvchi: ali1988valiyev bloklandi!
 admin1.unban_user(user1) # Foydalanuvchi: ali1988valiyev blockdan chiqarildi!
