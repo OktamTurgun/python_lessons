@@ -27,10 +27,11 @@ person1 = Shaxs("Hasan","Olimov","FB0011223",2002)
 person2 = Shaxs("Abdulloh","Karimov","AN0007456",1990)
 
 class Subject:
-    def __init__(self,nomi):
-      self.nomi = nomi
-    def __repr__(self):
-      return self.nomi
+  """Fan klassi - fan nomini saqlaydi"""
+  def __init__(self,nomi):
+    self.nomi = nomi
+  def __repr__(self):
+    return self.nomi
 
 class Student(Shaxs):
   """Student klassi"""
