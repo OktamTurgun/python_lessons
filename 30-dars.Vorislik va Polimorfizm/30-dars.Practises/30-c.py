@@ -51,11 +51,33 @@ class User(Shaxs):
   
   def get_age(self, yil):
     return super().get_age(yil)
+  
+class Admin(User):
+  def __init__(self,ism,familiya,passport,tyil,username,email,privilages=None):
+    super().__init__(ism,familiya,passport,tyil,username,email)
+    self.privilages = privilages if privilages else []
+    
+  def get_info(self):
+    info = super().get_info()
+    info += f"Imtiyozlar: {", ".join(self.privilages) if self.privilages else "Yo'q"}"
+    return info
+    
+  def ban_user(self,user):
+    print(f"Foydalanuvchi: {user.username} bloklandi!")
+    
+  def unban_user(self, user):
+      print(f"Foydalanuvchi: {user.username} blockdan chiqarildi!")
+    
  
 # Tekshirish namanalari:   
 user1 = User("Ali","Valiyev","AB232345",1988,"ali1988valiyev","Example@gmail.com")
+admin1 = Admin("Hasan","Husanov","AD123456",2005,"hasan123456","Example@7gmail.com",["ban", "edit", "delete"])
 print(user1.get_info())
 print(user1.get_age(2025))
+print(admin1.get_info())
+admin1.ban_user(user1) # Foydalanuvchi: ali1988valiyev bloklandi!
+admin1.unban_user(user1) # Foydalanuvchi: ali1988valiyev blockdan chiqarildi!
+
     
 class Seller(Shaxs):
   def __init__(self,ism,familiya,passport,tyil,dokon_nomi,ish_staji=0,maosh=0,tel=None):
@@ -151,12 +173,12 @@ class Client(Shaxs):
     return self.buyurtmalar
 
 # Tekshirish namunalari:
-client1_manzil = Manzil(27,"Azimov","Yashnobod","Toshkent shahar")
-client1 = Client("Akmal","Sobirov","AA098765",1998,client1_manzil,tel="+998909876543")
+# client1_manzil = Manzil(27,"Azimov","Yashnobod","Toshkent shahar")
+# client1 = Client("Akmal","Sobirov","AA098765",1998,client1_manzil,tel="+998909876543")
 # client1.add_order("Samsung Galaxy A56")
 # client1.add_order("Planshet CCIT Kids Tablet")
 # client1.add_order("Notebook ASUS Vivobook S 16X M5602")
 # print(client1.get_info())
-print(client1.get_age())
+# print(client1.get_age())
 # print(f"Buyurtmalari: {client1.get_orders()}")
     
