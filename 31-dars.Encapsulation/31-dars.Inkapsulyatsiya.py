@@ -49,7 +49,7 @@ class Avto:
     self.narh = narh
     self.__km = km
     self.__id = uuid4()
-    
+  
   def get_km(self):
     return self.__km
   
@@ -67,19 +67,47 @@ avto1 = Avto("GM","Malibu","Oq",2024,35000,20000)
 print(avto1.get_km(), "km")
 print(f"ID: {avto1.get_id()}")
 avto1.add_km(2300)
-print(avto1.get_km())
-avto1.add_km(-10000) # 
+print(avto1.get_km(), "km")
+avto1.add_km(-10000) # Mashinaning km ni kamaytirib bo'lmaydi! 
 
+# Exercise: 3
+class Avto:
+    __num_avto = 0
+    def __init__(self,make,model,rang,yil,narh,km=0):
+        """Avtomobilning xususiyatlari"""
+        self.make = make
+        self.model = model
+        self.rang = rang
+        self.yil = yil
+        self.narh = narh
+        self.__km = km
+        self.__id = uuid4()
+        Avto.__num_avto += 1
+        
+    @classmethod
+    def get_num_avto(cls):
+        return cls.__num_avto
+    
+    def get_km(self):
+        return self.__km
 
+    def get_id(self):
+        return self.__id
+    
+    def add_km(self,km):
+        if km>0:
+            self.__km += km
+        else:
+            print("Mashinaning km ni kamaytirib bo'lmaydi!")
 
+avto2 = Avto("Chevrolet","Tahoe","Qora",2024,85000,10000)
+print(avto2.get_km()) # 1000
+print(avto2.get_id()) # 223d1063-5a41-4e81-8310-0aca0e801624
+avto2.add_km(7000)
+print(avto2.get_km()) # 1700
 
-
-
-
-
-
-
-
-
-
-
+avto3 = Avto("Mercedes_Benz","AMG EQS Sedan","Polar White",2025,147550)
+avto4 = Avto("Porsche","718 Cayman","Black",2025,74800)
+avto5 = Avto("Ferrari","Ferrari Daytona SP3","Red",2025,2223935)
+print(Avto.get_num_avto()) # 4
+            
