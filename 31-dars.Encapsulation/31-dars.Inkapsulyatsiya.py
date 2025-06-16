@@ -36,6 +36,64 @@ hisob = BankHisobi("Anvar", 5000)
 # print(hisob.__pin)      # ERROR: private maydon
 # print(hisob.get_pin())  # To‘g‘ri yo‘l: getter orqali olish
 
+'''
+Klassga xos xususiyatlar va metodlar
+Tushuncha
+Turi	                                     Tavsif
+Obyektga xos xususiyat	                   self. bilan e’lon qilinadi
+Klassga xos xususiyat	                     Barcha obyektlar uchun umumiy (ClassName. orqali)
+Obyektga xos metodlar	                     Oddiy metodlar (self)
+Klassga xos metodlar	                     @classmethod va cls bilan
+Statik metodlar	                           @staticmethod — obyektga ham, klassga ham bog‘liq emas
+'''
+# Example:
+class Talaba:
+    universitet = "TATU"  # Klassga xos xususiyat
+
+    def __init__(self, ism, yosh):
+        self.ism = ism           # Obyektga xos xususiyat
+        self.__yosh = yosh       # Inkapsulyatsiya (private)
+
+    def get_yosh(self):          # Getter
+        return self.__yosh
+
+    @classmethod
+    def univers_nomi(cls):       # Klassga xos metod
+        return cls.universitet
+
+    @staticmethod
+    def hisobla_yosh(t_yil):
+        from datetime import date
+        return date.today().year - t_yil
+      
+# Ishlatish:
+talaba1 = Talaba("Olim", 25)
+print(talaba1.ism)               # Obyekt xossasi
+print(talaba1.get_yosh())        # Private xossaga kirish
+print(Talaba.univers_nomi())     # Klass metodi
+print(Talaba.hisobla_yosh(1999)) # Statik metod
+
+'''
+Jadval bilan umumlashtirish
+
+| Turi           | Belgilanishi      | Kirish usuli                         | Misol                       |
+| -------------- | ----------------- | ------------------------------------ | --------------------------- |
+| Obyekt xossasi | `self.ism`        | `obj.ism`                            | `talaba1.ism`               |
+| Klass xossasi  | `Class.ism`       | `obj.klass_nomi`, `Class.klass_nomi` | `Talaba.universitet`        |
+| Obyekt metodi  | `def metod(self)` | `obj.metod()`                        | `talaba1.get_info()`        |
+| Klass metodi   | `@classmethod`    | `Class.metod()`                      | `Talaba.get_count()`        |
+| Statik metod   | `@staticmethod`   | `Class.metod()`                      | `Talaba.hisobla_yosh(1990)` |
+
+Yodda tuting! 
+
+| Qoidalar                                              | Tavsiyalar                               |
+| ----------------------------------------------------- | ---------------------------------------- |
+| `self` — obyektga tegishli narsa uchun                | Har doim `__init__` va metodlarda kerak  |
+| `cls` — klassga tegishli narsa uchun                  | Faqat `@classmethod` metodda ishlatiladi |
+| `@staticmethod` — klassdan mustaqil funksiyalar uchun | Hech `self` ham, `cls` ham kerak emas    |
+
+'''
+
 # Exercise: 2
 from uuid import uuid4
 
