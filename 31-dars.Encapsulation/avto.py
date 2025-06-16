@@ -175,10 +175,3 @@ class Airplane:
               f"Sig'imi: {self.capacity} yo'lovchi, "
               f"Max balandlik: {self.max_altitude}, "
               f"Uchishlar soni: {self.get_flights()}, ID: {self.get_id()}.")
-      
-    def get_info(self):
-        return (f"Samolyot: {self.model}, Aviakompaniya: {self.airline}, "
-                f"Sig'imi: {self.capacity} yo'lovchi, "
-                f"Maximal balandlik: {self.max_altitude} m, "
-                f"Uchishlar soni: {self.get_flights()}, ID: {self.get_id()}")
-
