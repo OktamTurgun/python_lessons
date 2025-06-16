@@ -28,6 +28,11 @@ class Avto:
         else:
             print("Mashinaning km ni kamaytirib bo'lmaydi!")
             
+    def get_info(self):
+        return (f"Avto: {self.make} {self.model}, Rangi: {self.rang}, "
+                f"Yili: {self.yil}, Narxi: ${self.narh}, "
+                f"Km: {self.get_km()}, ID: {self.get_id()}")
+            
 class Bus:
     __num_bus = 0
     
@@ -60,7 +65,11 @@ class Bus:
             self.__km += km
         else:
             print("Avtobus km ni kamaytirib bo'lmaydi!")
-
+            
+    def get_info(self):
+        return (f"Avtobus: {self.model}, Sig'imi: {self.capacity} yo'lovchi, "
+                f"Yili: {self.year}, Kompaniya: {self.company}, "
+                f"Marshrut: {self.route}, Km: {self.get_km()}, ID: {self.get_id()}")
 
 class Train:
     __num_train = 0
@@ -88,6 +97,12 @@ class Train:
     def change_speed(self, new_speed):
         self.speed = new_speed
         print(f"Poyezd tezligi {new_speed} km/h ga o'zgartirildi")
+        
+    def get_info(self):
+      return (f"Poyezd: {self.name}, Tezligi: {self.speed} km/soat, "
+              f"Vagonlar soni: {self.carriages}, "
+              f"Marshrut: {self.route}, Ishlab chiqaruvchi: {self.manufacturer}, "
+              f"ID: {self.get_id()}")
 
 
 class Student:
@@ -119,8 +134,12 @@ class Student:
     def update_gpa(self, new_gpa):
         self.gpa = new_gpa
         print(f"{self.name}ning GPA {new_gpa} ga yangilandi")
-
-
+        
+    def get_info(self):
+      return (f"Talaba: {self.name}, Yosh: {self.age}, "
+              f"Universitet: {self.university}, Kurs: {self.course}, "
+              f"GPA: {self.gpa}, ID: {self.get_id()}")
+    
 class Airplane:
     __num_airplane = 0
     
@@ -150,4 +169,16 @@ class Airplane:
     def change_airline(self, new_airline):
         self.airline = new_airline
         print(f"Samolyot {new_airline} aviakompaniyasiga o'tkazildi")
+        
+    def get_info(self):
+      return (f"samolyot: {self.model}, Aviacompany: {self.airline}, "
+              f"Sig'imi: {self.capacity} yo'lovchi, "
+              f"Max balandlik: {self.max_altitude}, "
+              f"Uchishlar soni: {self.get_flights()}, ID: {self.get_id()}.")
+      
+    def get_info(self):
+        return (f"Samolyot: {self.model}, Aviakompaniya: {self.airline}, "
+                f"Sig'imi: {self.capacity} yo'lovchi, "
+                f"Maximal balandlik: {self.max_altitude} m, "
+                f"Uchishlar soni: {self.get_flights()}, ID: {self.get_id()}")
 
