@@ -160,6 +160,21 @@ class Avtosalon:
   def __setitem__(self,index,qiymat):
     self.avtolar[index] = qiymat
     
+  def __call__(self,*value):
+    if value:
+      for avto in value:
+          self.add_avto(avto)
+    else:  
+      return [avto for avto in self.avtolar]
+  
+  def __add__(self,value):
+      if isinstance(value,Avtosalon):
+          new_salon = Avtosalon(f"{self.name} {value.name}")
+          new_salon.avtolar = self.avtolar + value.avtolar
+          return new_salon
+      elif isinstance(value,Avto):
+          self.add_avto(value)
+    
   def __len__(self):
     return len(self.avtolar)
 
@@ -175,21 +190,23 @@ avto2 = Avto("BMW", "M5 Competition", "Sapphire Black", 2024, 125300)
 avto3 = Avto("Audi", "RS7 Sportback", "Nardo Gray", 2023, 118900)
 
 salon1 = Avtosalon("ModernAvto")
+salon2 = Avtosalon("Avto Lider")
 salon1.add_avto(avto1,avto2,avto3)
 # print(salon1.avtolar[1])
-print(salon1[0])
-print(salon1[2])
+# print(salon1[0])
+# print(salon1[2])
 
 # 1-indexdagi avtoni o'zgartiramiz
 salon1[1] = Avto("Porsche", "Taycan Turbo S", "Ice Blue", 2025, 185000)
-print(salon1.avtolar)
+# print(salon1.avtolar)
 
 # salon1 ga yangi avto qo'shamiz
 salon1.add_avto(avto6)
-print(salon1.avtolar)
+salon2(avto4,avto5,avto6)
+# print(salon1.avtolar)
 
 # Salondagi avtolar sonini chiqaramiz
-print(len(salon1))
+print(f"Hozircha salonda {len(salon1)} ta avtomobil mavjud")
 
 
 # Exercise 5. __getitem__ , __setitem__ methods
@@ -231,6 +248,9 @@ class Kutubxona:
             self.kitoblar.append(yangi_kitob)
         else:
             raise IndexError("Noto'g'ri indeks!")
+            
+    def __len__(self):
+        return len(self.kitoblar)
     
     def qoshish(self, *kitoblar):
         for kitob in kitoblar:
@@ -268,5 +288,8 @@ kutubxona[1] = Kitob("Kecha va kunduz", "Abdulla Qodiriy", 1936)
 # Yangi kitob qo'shamiz (agar indeks = len(kitoblar) bo'lsa, append qiladi)
 kutubxona[3] = kitob6
 # print("\nYangi kitob qo'shilgan kutubxona:")
-# print(kutubxona.kitoblar)  
+# print(kutubxona.kitoblar) 
+
+# Kutubxonada nechta kitob borligini chiqaramiz
+print(f"Hozirda kutubxonamizda {len(kutubxona)} ta kitob mavjud.") 
 
