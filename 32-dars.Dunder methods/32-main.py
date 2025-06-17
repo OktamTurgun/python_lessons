@@ -118,14 +118,14 @@ avto6 = Avto("Lexus", "LC 500", "Infrared", 2024, 96500)
 '''
 Taqqoslash dunder metodlari
 
-Dunder Metod	 |        Maqsadi	                    | Ishlatilishi
+Dunder Metod   |        Maqsadi	                      | Ishlatilishi
 -----------------------------------------------------------------
 __eq__	       |        Tenglikni tekshiradi	      | a == b
 __ne__	       |        Teng emaslikni tekshiradi	  | a != b
-__lt__	       |        Kichiklikni tekshiradi	    | a < b
+__lt__	       |        Kichiklikni tekshiradi	      | a < b
 __le__	       |        Kichik yoki teng	          | a <= b
 __gt__	       |        Kattalikni tekshiradi	      | a > b
-__ge__	       |        Katta yoki teng	            | a >= b
+__ge__	       |        Katta yoki teng	              | a >= b
 
 '''
 # print(avto1 == avto2) # False
