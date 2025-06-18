@@ -128,6 +128,11 @@ class Student(Shaxs):
       return self.__bosqich + other.__bosqich
     raise ValueError("Faqat student obyektlarini qo'shish mumkin")
   
+  def remove(self):
+    """Talaba o'chirilganda ekranga bildirishnima chiqarssh"""
+    Student.__students_num -= 1
+    print(f"{self.get_ism()} ismli talaba o'chirildi! Qolgan talabalar: {Student.get_num_students()} ta.")  
+    
   @classmethod
   def get_num_students(cls):
     """Barcha yaratilgan talabalar sonini qaytaradi"""
@@ -167,18 +172,19 @@ class Student(Shaxs):
             raise ValueError("Bosqich 1-4 oralig'ida bo'lishi kerak")
           
 # Tekshirih uchun na'munalar
-shaxs1 = Shaxs("Abvar","Oripov","AC098761",2004)
+shaxs1 = Shaxs("Anvar","Oripov","AC098761",2004)
 shaxs2 = Shaxs("Orif","Tolipov","AD098762",2000)
-shaxs3 = Shaxs("Abvar","Oripov","AS098763",1998)
-shaxs4 = Shaxs("Abvar","Oripov","AK098764",2004)
+shaxs3 = Shaxs("Abror","Zoitov","AS098763",1998)
+shaxs4 = Shaxs("Abram","Tolibov","AK098764",2004)
 # print(shaxs1)
 
 student1 = Student("Olim","Xakimov","AS098765",2004,1)
-student2 = Student("Olim","Xakimov","AS098765",2004,2)
-student3 = Student("Olim","Xakimov","AS098765",2004,3)
+student2 = Student("Mashrab","Sobirov","Ad098764",2004,2)
+student3 = Student("Botir","Bekov","Ad098763",2004,3)
 print(student1) # Talabaning ma'lumotlarini chiqaradi
 print(student1 == student2) # False
 print(student2 < student1)  # FAlse
 print(student3 >= student2) # True
 print(student1 + student2) # 3
+student1.remove()
       
