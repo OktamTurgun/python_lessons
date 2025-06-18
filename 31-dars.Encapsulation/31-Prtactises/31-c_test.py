@@ -59,7 +59,7 @@ print(Shaxs.get_num_persons())  # 10
 Student.set_students_num(8)
 print(Student.get_num_students())  # 8
 
-# set_persons_num() xato holat
+# set_persons_num() xato holat uchun misol
 try:
     Shaxs.set_persons_num(-3)
 except ValueError as e:

@@ -41,11 +41,16 @@ class Shaxs:
     joriy_yil = datetime.datetime.now().year
     return f"Yosh: {joriy_yil - self.__tyil}"
   
-  def get_info(self):
+  # Dunder methods
+  def __repr__(self):
     """Shahs haqida ma'lumot"""
-    info = f"{self.__ism} {self.__familiya}. "
-    info += f"Passport: {self.__passport}, {self.__tyil}-yilda tug'ilgan {self.get_age()}-yoshda"
+    info = f"Shaxs: {self.__ism} {self.__familiya}. "
+    info += f"\nPassport: {self.__passport}, {self.__tyil}-yilda tug'ilgan, {self.get_age()}-yoshda, "
+    info += f"\nID: {self.__id}"
     return info
+  
+  def __eq__(self,other):
+    return self.__id == other.id
   
   # Setter methodlar
   @classmethod
@@ -91,6 +96,37 @@ class Student(Shaxs):
     self.__id = uuid4()
     self.__bosqich = bosqich
     Student.__students_num += 1
+    
+  # Dunder methods
+  def __repr__(self):
+    """Talaba haqida ma'lumotlar"""
+    info = f"Talaba: {self.get_ism()} {self.get_familiya()} "
+    info += f"\nPassport: {self.get_passport()} \n{self.get_age()}-yoshda, "
+    info += f"{self.get_bosqich()}-bosqich talabasi."
+    return info
+  
+  def __eq__(self,other):
+    return self.__bosqich == other.__bosqich
+  
+  def __lt__(self,other):
+    return self.__bosqich < other.__bosqich
+  
+  def __ge__(self,other):
+    return self.__bosqich >= other.__bosqich
+  
+  def __ne__(self, other):
+    return not self.__eq__(other)
+
+  def __gt__(self, other):
+      return self.__bosqich > other.__bosqich
+
+  def __le__(self, other):
+      return self.__bosqich <= other.__bosqich
+  
+  def __add__(self,other):
+    if isinstance(other, Student):
+      return self.__bosqich + other.__bosqich
+    raise ValueError("Faqat student obyektlarini qo'shish mumkin")
   
   @classmethod
   def get_num_students(cls):
@@ -131,5 +167,18 @@ class Student(Shaxs):
             raise ValueError("Bosqich 1-4 oralig'ida bo'lishi kerak")
           
 # Tekshirih uchun na'munalar
-shaxs1 = Shaxs("Abvar","Oripov","")
+shaxs1 = Shaxs("Abvar","Oripov","AC098761",2004)
+shaxs2 = Shaxs("Orif","Tolipov","AD098762",2000)
+shaxs3 = Shaxs("Abvar","Oripov","AS098763",1998)
+shaxs4 = Shaxs("Abvar","Oripov","AK098764",2004)
+# print(shaxs1)
+
+student1 = Student("Olim","Xakimov","AS098765",2004,1)
+student2 = Student("Olim","Xakimov","AS098765",2004,2)
+student3 = Student("Olim","Xakimov","AS098765",2004,3)
+print(student1) # Talabaning ma'lumotlarini chiqaradi
+print(student1 == student2) # False
+print(student2 < student1)  # FAlse
+print(student3 >= student2) # True
+print(student1 + student2) # 3
       
