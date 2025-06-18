@@ -15,26 +15,26 @@ misoli hamda natijasi berilgan:
 
 Method nomi	     Maqsadi (Qachon chaqiriladi)	                    Misol kodi	                                                  Natijasi yoki Izohi
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-__init__	       Obyekt yaratilganda chaqiriladi	                def __init__(self, ism):                                      obj = Talaba("Ali") → obj.ism == "Ali"
-                                                                    self.ism = ism	                      
+__init__	     Obyekt yaratilganda chaqiriladi	                def __init__(self, ism):                                      obj = Talaba("Ali") → obj.ism == "Ali"
+                                                                      self.ism = ism	                      
 __str__	         print(obj) yoki str(obj) qilinganda	            def __str__(self):                                            print(obj) → Talaba: Ali
-                                                                    return f"Talaba: {self.ism}"	              
-__repr__	       repr(obj) chaqirilganda (developerlarga ko‘proq)	def __repr__(self):                                           repr(obj) → Talaba('Ali')
-                                                                    return f"Talaba('{self.ism}')"	          
-__len__	         len(obj) chaqirilganda	                          def __len__(self):                                            len(obj) → kurslar soni
-                                                                    return len(self.kurslar)	                  
+                                                                      return f"Talaba: {self.ism}"	              
+__repr__	     repr(obj) chaqirilganda (developerlarga ko‘proq)	def __repr__(self):                                           repr(obj) → Talaba('Ali')
+                                                                      return f"Talaba('{self.ism}')"	          
+__len__	         len(obj) chaqirilganda	                            def __len__(self):                                            len(obj) → kurslar soni
+                                                                     return len(self.kurslar)	                  
 __eq__	         obj1 == obj2 qilinganda	                        def __eq__(self, other):                                      obj1 == obj2 → True/False
-                                                                    return self.ism == other.ism	        
-__add__	         obj1 + obj2 qilinganda	                          def __add__(self, other):                                     obj1 + obj2 → 45 (yoshlar yig‘indisi)
-                                                                    return self.yosh + other.yosh	      
-__getitem__	     obj[key] chaqirilganda	                          def __getitem__(self, key):                                   obj[0] → "Python"
-                                                                    return self.kurslar[key]	        
-__setitem__	     obj[key] = val qilinganda	                      def __setitem__(self, key, val):                              obj[1] = "JS"
-                                                                    self.kurslar[key] = val	    
+                                                                      return self.ism == other.ism	        
+__add__	         obj1 + obj2 qilinganda	                            def __add__(self, other):                                     obj1 + obj2 → 45 (yoshlar yig‘indisi)
+                                                                      return self.yosh + other.yosh	      
+__getitem__	     obj[key] chaqirilganda	                            def __getitem__(self, key):                                   obj[0] → "Python"
+                                                                      return self.kurslar[key]	        
+__setitem__	     obj[key] = val qilinganda	                        def __setitem__(self, key, val):                              obj[1] = "JS"
+                                                                      self.kurslar[key] = val	    
 __delitem__	     del obj[key] qilinganda	                        def __delitem__(self, key):                                   del obj[2] → 3-kurs o‘chadi
-                                                                    del self.kurslar[key]	            
-__contains__	   val in obj qilinganda	                          def __contains__(self, item):                                 "Python" in obj → True/False
-                                                                    return item in self.kurslar	    
+                                                                      del self.kurslar[key]	            
+__contains__	 val in obj qilinganda	                            def __contains__(self, item):                                 "Python" in obj → True/False
+                                                                      return item in self.kurslar	    
 '''
 # Exercise: 1 Talaba Klassida Dunder Methodlar
 class Talaba:

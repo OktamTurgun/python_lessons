@@ -178,17 +178,17 @@ class Student(Shaxs):
             raise ValueError("Bosqich 1-4 oralig'ida bo'lishi kerak")
           
 # Fan klassi         
-class Fan:
+class Fan: 
     __fanlar_soni = 0
     __fanlar_royxati = []
     __students_num = 0
+    __students_list = []
 
     def __init__(self, nomi):
         self.nomi = nomi
         self.students = []
         Fan.__fanlar_soni += 1
         Fan.__fanlar_royxati.append(self)
-        Fan.__students_num += 1
     
     def remove_fan(self):
         """Fanni ro‘yxatdan chiqarish"""
@@ -206,13 +206,24 @@ class Fan:
     @classmethod
     def get_fanlar_royxati(cls):
         return [fan.nomi for fan in cls.__fanlar_royxati]
+      
+    @classmethod
+    def get_students_num(cls):
+      return f"Xozirda {cls.__students_num} ta talaba ro'yxatga olingan."
+      
+    @classmethod
+    def get_students_list(cls):
+      # return [s.get_info() for s in cls.__students_list]
+      return [f"{s.get_info()}" for s in cls.__students_list]
 
     def add_student(self, student):
       if isinstance(student, Student):
         self.students.append(student)
+        Fan.__students_num += 1
+        Fan.__students_list.append(student)
       else:
         raise ValueError("Faqat Student obyektini qo'shish mumkin.")
-
+    
     def __getitem__(self, index):
       return self.students[index]
 
@@ -273,24 +284,32 @@ student6 = Student("Xolid","Ziyatov",1997,2)
 matematika.add_student(student1)
 matematika.add_student(student2)
 matematika.add_student(student3)
-# print(len(matematika))             # 3 ta talaba
+print(len(matematika))             # 3 ta talaba
 
-# print(student1 in matematika)      # True
-# print(student4 in matematika)      # False
+print(student1 in matematika)      # True
+print(student4 in matematika)      # False
 
 kimyo.add_student(student3)
 kimyo.add_student(student5)
 # print(len(kimyo))
 
 fizika.add_student(student4)
+fizika.add_student(student2)
+fizika.add_student(student1)
+print(len(fizika))
+
 programming.add_student(student1)
 programming.add_student(student4)
 programming.add_student(student6)
-# print(len(programming))
+print(len(programming))
 
-# # Fanlar soni va ro'yxatini tekshirish
+# Fanlar soni va ro'yxatini tekshirish
 print(Fan.get_num_fanlar())        # Hozircha 5 ta fan ro'yxatga olingan.
 print(Fan.get_fanlar_royxati())    # ['Oliy matematika', 'Kimyo', 'Fizika', 'Tarix', 'Sun’iy intellekt (AI)']
+
+# Studentlar soni va ro'yxatini tekshirish
+print(Fan.get_students_num())
+print(Fan.get_students_list())
 
 # + orqali qo‘shish, - orqali olib tashlash
 matematika + student4              # student4 ni ham qo‘shadi
@@ -300,6 +319,9 @@ matematika - student2              # student2 ni olib tashlaydi
 print(len(matematika))             # 3
 
 matematika - student3.get_id()     # ID orqali olib tashlash
+kimyo - "d96a545d-edc9-45e7-bbcf-63c7a7cc243e"
+print(len(kimyo))
+kimyo()
 
 # Indeks orqali kirish va o‘zgartirish
 print(matematika[0])               # 0-indexdagi talabani chiqaradi
@@ -312,8 +334,12 @@ matematika()                       # print(matematika) bilan bir xil
 matematika(student2)               # student2 ni yana qo‘shadi
 
 # Fan obyektini o‘chirish
-fizika = Fan("Fizika")
-print(Fan.get_fanlar_royxati())  # ['Fizika']
+# fizika = Fan("Fizika")
+# print(Fan.get_fanlar_royxati())  # ['Fizika']
 
-fizika.remove_fan()              # Fizika fani ro'yxatdan chiqarildi.
-print(Fan.get_fanlar_royxati())  # ['Oliy matematika', 'Kimyo', 'Fizika', 'Tarix', 'Sun’iy intellekt (AI)']
+# fizika.remove_fan()              # Fizika fani ro'yxatdan chiqarildi.
+# print(Fan.get_fanlar_royxati())  # ['Oliy matematika', 'Kimyo', 'Fizika', 'Tarix', 'Sun’iy intellekt (AI)']
+
+# kimyo(student5)
+# kimyo()
+# fizika()
