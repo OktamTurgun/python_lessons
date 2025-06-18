@@ -11,11 +11,6 @@ Minus (-) operatori yordamida fandan talaba olib tashlash metodini yozing
 Fan obyektlarini chaqiriladigan qiling (masalan, fizika(), yoki 
 fizika(talaba1)). Bu metodlarni o'zingiz istagandek talqin qiling.
 """
-'''
-Avvalga darslarda yaratilgan obyektlarga (Shaxs, Student) turli dunder metodlarni qo'shishni mashq qiling. 
-Obyekt haqida ma'lumot (__rerp__)
-Talabalarni bosqichi bo'yicha solishtirish (__lt__,__eg__ va hokazo)
-'''
 from uuid import uuid4
 import datetime
 
@@ -223,6 +218,15 @@ class Fan:
         Fan.__students_list.append(student)
       else:
         raise ValueError("Faqat Student obyektini qo'shish mumkin.")
+      
+    def add_students(self,*new_students):
+      for student in new_students:
+          if isinstance(student,Student):
+              self.students.append(student)
+              Fan.__students_num += 1
+              Fan.__students_list.append(student)
+          else:
+              raise ValueError("Faqat student obyektini kiriting!")
     
     def __getitem__(self, index):
       return self.students[index]
@@ -343,3 +347,14 @@ matematika(student2)               # student2 ni yana qo‘shadi
 # kimyo(student5)
 # kimyo()
 # fizika()
+
+'''
+Yana qoshish mumkin bolgan xolatlar
+Talaba qo'shishda bir xil talaba qo'shilmasligini tekshirish
+
+Olib tashlashda bir nechta mos keluvchi talabalar bo'lsa, ular haqida ogohlantirish
+
+Fan nomini o'zgartirish metodini qo'shish
+
+Talabalar ro'yxatini filterlash metodlari (masalan, bosqich bo'yicha)
+'''
