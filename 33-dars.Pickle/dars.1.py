@@ -5,18 +5,18 @@ Created on Thu Jun 19 12:29:14 2025
 
 @author: uktam
 """
-#!!! Tavsiya qilingan usul
-with open('pi.txt') as file:
-    pi = file.read()
+#!!! Tavsiya qilingan oddiy usul
+# with open('pi.txt') as file:
+#     pi = file.read()
     
-print(pi)
+# print(pi)
 
-pi = pi.rstrip()
-pi = pi.replace('\n','')
-pi = float(pi)
-print(pi)
+# pi = pi.rstrip()
+# pi = pi.replace('\n','')
+# pi = float(pi)
+# print(pi)
 
-# Exercise: 2
+# Exercise: 2 Xatolarni boshqarish bilan ishlash (tavsiya etilgan usul)
 with open('pi.txt') as file:
     pi = file.read()
     
@@ -28,16 +28,16 @@ pi = pi.replace(' ','')   # bo'shliqlarni ham olib tashlash kerak bo'lishi mumki
 
 try:
     pi_float = float(pi)  # float ga o'girishga harakat qilamiz
-    print(pi_float)
+    print("Float qiymati:", pi_float)
 except ValueError:
     print("Faylda noto'g'ri formatdagi ma'lumot bor. Faqat sonlarni o'qiydigan qiling.")
 
-# Exercise: 3    
-with open('pi.txt') as file:
-    pi = file.read().strip().replace('\n', '')
+# Exercise: 3 Qisqartirilgan va optimallashtirilgan usul
+# with open('pi.txt') as file:
+#     pi = file.read().strip().replace('\n', '')
 
-try:
-    pi_float = float(pi)
-    print("Float qiymati:", pi_float)
-except ValueError:
-    print("Xato: Faylda son emas, boshqa belgilar bor!")
+# try:
+#     pi_float = float(pi)
+#     print("Float qiymati:", pi_float)
+# except ValueError:
+#     print("Xato: Faylda son emas, boshqa belgilar bor!")
