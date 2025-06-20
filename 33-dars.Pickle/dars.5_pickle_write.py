@@ -5,13 +5,15 @@ Created on Thu Fri 20 11:20:14 2025
 
 @author: uktam
 """
-import pickle
+import pickle # Pickle moduli fayllarni binar formatda saqlash va o'qish uchun ishlatiladi
 # Faylga yozish
 talaba1 = {"ism": "Hasan", "familiya": "Olimov", "tyil": 2005, "kurs": 2}
 talaba2 = {"ism": "Alijon", "familiya": "Valiyev", "tyil": 2004, "kurs": 3}
 talaba3 = {"ism": "Rahima", "familiya": "Muminova", "tyil": 2006, "kurs": 1}
 talabalar = [talaba1, talaba2, talaba3]
 
+# Tavsiya qilingan usul: har bir talabani alohida faylga yozish
+# Bu usul faylni o'qish va yozishda qulaylik yaratadi
 with open('info', 'wb') as file:
     pickle.dump(talaba1, file)
 with open('info', 'ab') as file:

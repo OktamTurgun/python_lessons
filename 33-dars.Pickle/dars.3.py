@@ -5,7 +5,7 @@ Created on Thu Fri 20 09:53:14 2025
 
 @author: uktam
 """
-filename = 'data/talabalar.txt'
+filename = 'C:/Users/User/Documents/GitHub/python_lessons/python_lessons/33-dars.Pickle/students.txt'
 # with open(filename) as file:
 #   for line in file:
 #     print(line)
@@ -18,8 +18,9 @@ print(talabalar)  # O'qilgan talabalar ro'yxatini chiqaramiz
 talabalar = [talaba.strip() for talaba in talabalar]
 print(talabalar)
 
+
 # 1. Faylni o'qish
-with open(filename, 'r', encoding='utf-8') as file:
+with open(filename, 'r') as file:
     talabalar = file.readlines()  # Har bir qatorni ro'yxatga olamiz
 
 # 2. Ro'yxatni ko'rish (asl holatda)
