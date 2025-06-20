@@ -5,7 +5,7 @@ Created on Thu Fri 20 09:53:14 2025
 
 @author: uktam
 """
-filename = 'C:/Users/User/Documents/GitHub/python_lessons/python_lessons/33-dars.Pickle/students.txt'
+filename = 'C:/Users/User/Documents/GitHub/python_lessons/python_lessons/33-dars.Pickle/data/students.txt'
 # with open(filename) as file:
 #   for line in file:
 #     print(line)

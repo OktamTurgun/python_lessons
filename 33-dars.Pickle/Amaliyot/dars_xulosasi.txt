@@ -1,0 +1,16 @@
+Bugun biz Python'da fayllar bilan ishlashni o‘rgandik. Asosiy e’tiborimiz esa pickle moduliga qaratildi:
+
+• Matnli fayllar bilan ochish/yozish: 'w' va 'r' usullari.
+• Binary formatda ochish/yozish: 'wb' va 'rb' — pickle uchun kerak.
+• pickle.dump() va pickle.load() yordamida:
+    - Dictionary va ro‘yxat obyektlarini faylga yozish/o‘qish.
+    - Klass (Talaba) obyektlarini saqlash va qayta ochishda obyekt sifatida ishlatish.
+• Fayldagi obyektlar ustida amaliy amallar:
+    - Obyekt qo‘shish, chiqarish (filter orqali).
+    - Har safar faylni to‘liq yangilash orqali update metodologiyasi.
+• Xavfsizlik masalasi: pickle bilan noto‘g‘ri ishlashda **kod bajarilish xavfi** bo‘lishi mumkin → **faqat ishonchli fayllardan foydalanish** lozim.
+
+Darsni yakunlab, shu kodlar asosida oddiy student manager dastur yozdik:
+- Talaba obyektlarini `.pkl` faylga saqlaymiz.
+- O‘qish, qo‘shish, o‘chirish funksiyalari bilan faylni boshqaramiz.
+- Fayl mavjud bo‘lmasa yaratamiz
