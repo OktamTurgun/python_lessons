@@ -6,6 +6,7 @@ Created on Thu Fri 20 15:31:14 2025
 @author: uktam
 """
 import pickle
+
 with open('info', 'rb') as file: # 'info' faylini binar formatda o'qish
   # Fayldan talabalarni o'qib olamiz
   talaba1 = pickle.load(file)
