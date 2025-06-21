@@ -53,7 +53,10 @@ python student_manager.py
 
 Pickle moduli faqat ishonchli fayllar bilan ishlaganda xavfsiz. Internetdan yuklab olingan `.pkl` fayllarni `load()` qilish xavfli bo‘lishi mumkin.
 
-👉 Batafsil yo‘riqnoma: [Batafsil yo‘riqnoma: Pickle xavfsizlik qo‘llanmasi](SECURITY.md)
+```
+👉 Batafsil yo‘riqnoma: [Pickle xavfsizlik qo‘llanmasi](./Pickle%20Xavfsizlik%20Yo%20Riqnoma.md)
+```
+
 
 
 
