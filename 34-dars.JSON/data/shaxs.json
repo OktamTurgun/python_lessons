@@ -1,0 +1,32 @@
+{
+    "ism": "Abbos",
+    "familiya": "Sobitxanov",
+    "yosh": 34,
+    "kasb": "Duradgor",
+    "manzil": [
+        {
+            "uy": 147,
+            "kocha": "Quruvchilar",
+            "mahalla": "Obod",
+            "tuman": "Uchqo'rg'on",
+            "viloyat": "Namangan",
+            "davlat": "Uzbekistan"
+        }
+    ],
+    "oila": true,
+    "farzandlar": [
+        {
+            "ism": "Soliha",
+            "yosh": 7
+        },
+        {
+            "ism": "Ahmad",
+            "yosh": 3
+        }
+    ],
+    "hobbi": [
+        "futbol",
+        "suzish",
+        "qo'shiq aytish"
+    ]
+}
