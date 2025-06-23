@@ -62,8 +62,24 @@ with open('talaba1.json', 'w') as file:
 # Ularning har birini alohida qatordan 
 # "Ism Familiya, n-kurs, Fakultet talabasi" ko'rinishida konsolga chiqaring.
 
-with open(r'C:\Users\User\Documents\GitHub\python_lessons\python_lessons\34-dars.JSON\data\students_1.json', 'r') as f:
-  data = json.load(f)
+# with open(r'C:\Users\User\Documents\GitHub\python_lessons\python_lessons\34-dars.JSON\data\students_1.json', 'r') as f:
+#   data = json.load(f)
   
-for talaba in data['student']:
-  print(f"Talaba: {talaba['name']} {talaba['lastname']}, {talaba['year']}-kurs, {talaba['faculty']} fakulteti talabasi")
+# for talaba in data['student']:
+#   print(f"Talaba: {talaba['name']} {talaba['lastname']}, {talaba['year']}-kurs, {talaba['faculty']} fakulteti talabasi")
+  
+with open(r'C:\Users\User\Documents\GitHub\python_lessons\python_lessons\34-dars.JSON\data\shaxs.json', 'r', encoding='utf-8') as file:
+  shaxs = json.load(file)
+  
+print(f"Ism: {shaxs['ism']} {shaxs['familiya']}, Yosh: {shaxs['yosh']}, Kasb: {shaxs['kasb']}")
+
+print(f"{shaxs['ism']} {shaxs['familiya']} ({shaxs['yosh']} yosh)")
+print(f"Kasbi: {shaxs['kasb']}")
+print("\nFarzandlar:")
+for i, farzand in enumerate(shaxs['farzandlar'], 1):
+    print(f"{i}. {farzand['ism']} ({farzand['yosh']} yosh)")
+    
+manzil = shaxs['manzil'][0]
+print(f"Manzil: {manzil['uy']}-uy, {manzil['kocha']} ko'chasi")
+
+print(f"""Oilali: {'Ha' if shaxs['oila'] else "Yo'q"}""")
