@@ -1,0 +1,20 @@
+{
+  "ism": "Alisher",
+  "familiya": "Tojiyev",
+  "yosh": 27,
+  "kasb": "Software Engigeer",
+  "malumotlar": [
+    "Python",
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "SQL",
+    "PHP",
+    "Swift",
+    "Go",
+    "Kotlin",
+    "Rust",
+    "TypeScript",
+    "Visual Basic .NET"
+  ]
+}
