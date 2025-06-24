@@ -254,26 +254,26 @@ def create_my_class_instance(value):
 
 
 # Test funksiyalarini chaqirish
-# if __name__ == "__main__":
-    # print("Nolga bo'lish:", divide_numbers(10, 0))
-    # print("Noto'g'ri qiymat:", convert_to_int("abc"))
-    # print("Faylni o'qish:", read_file("nonexistent.txt"))
-    # print("Noto'g'ri turdagi qo'shish:", add_numbers(5, "10"))
-    # print("Kalit topilmagan:", get_value_from_dict({"a": 1}, "b"))
-    # print("Indeks ro'yxatdan tashqarida:", get_item_from_list([1, 2, 3], 5))
-    # print("Atribut topilmagan:", get_length_of_string(123))
-    # print("Modul topilmagan:", import_module("nonexistent_module"))
-    # print("Tekshirish xatosi:", assert_positive(-5))
-    # print("Bajarilish xatosi:", risky_operation())
-    # print(f"20 ni {n} ga bo'lish natijasi:", divide_by_input(n))
-    # print("Fayl topilmagan xato:", field_not_found_error())
+if __name__ == "__main__":
+    print("Nolga bo'lish:", divide_numbers(10, 0))
+    print("Noto'g'ri qiymat:", convert_to_int("abc"))
+    print("Faylni o'qish:", read_file("nonexistent.txt"))
+    print("Noto'g'ri turdagi qo'shish:", add_numbers(5, "10"))
+    print("Kalit topilmagan:", get_value_from_dict({"a": 1}, "b"))
+    print("Indeks ro'yxatdan tashqarida:", get_item_from_list([1, 2, 3], 5))
+    print("Atribut topilmagan:", get_length_of_string(123))
+    print("Modul topilmagan:", import_module("nonexistent_module"))
+    print("Tekshirish xatosi:", assert_positive(-5))
+    print("Bajarilish xatosi:", risky_operation())
+    print(f"20 ni {n} ga bo'lish natijasi:", divide_by_input(n))
+    print("Fayl topilmagan xato:", field_not_found_error())
 # OOP xatolar bilan ishlash
-    # my_instance = create_my_class_instance(10)
-    # if my_instance:
-    #     print("MyClass instance:", my_instance.get_value())
-    # my_instance = create_my_class_instance("abc")  # Bu yerda xato yuz beradi
-    # if my_instance:
-    #     print("MyClass instance:", my_instance.get_value())
+    my_instance = create_my_class_instance(10)
+    if my_instance:
+        print("MyClass instance:", my_instance.get_value())
+    my_instance = create_my_class_instance("abc")  # Bu yerda xato yuz beradi
+    if my_instance:
+        print("MyClass instance:", my_instance.get_value())
 
 # Ushbu kodda turli xil xatolarni qanday aniqlash va ularga qanday javob berish ko'rsatilgan
 # Har bir funksiya o'ziga xos xatolarni aniqlaydi va ularga mos ravishda javob beradi
