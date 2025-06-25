@@ -1,0 +1,14 @@
+{
+    "name": "Alice",
+    "skills": [
+        "Python",
+        "SQL",
+        "Django"
+    ],
+    "age": 25,
+    "is_active": true,
+    "projects": {
+        "project1": "E-commerce",
+        "project2": "Blog"
+    }
+}
