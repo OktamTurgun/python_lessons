@@ -36,3 +36,6 @@ class User:
         self.email = None
         self._password = None
         self.confirmed = False
+
+    def __str__(self):
+        return f"User: {self.username}, Email: {self.email}, Confirmed: {self.confirmed}"

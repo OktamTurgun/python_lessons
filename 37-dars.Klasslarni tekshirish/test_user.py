@@ -49,6 +49,16 @@ class TestUser(unittest.TestCase):
         user = User("alice", "alice@mail.com", "mypassword")
         self.assertFalse(user.check_password("wrongpass"))
 
+    def test_str_method(self):
+        """User klassining __str__ methodini tekshirish"""
+        user5 = User("Anvar", "anvar@gmail.com", "anvar1995")
+        user5.confirm_email()
+        self.assertEqual(
+            str(user5), "User: Anvar, Email: anvar@gmail.com, Confirmed: True")
+        user5.delete_account()
+        self.assertEqual(
+            str(user5), "User: None, Email: None, Confirmed: False")
+
 
 if __name__ == "__main__":
     unittest.main()
