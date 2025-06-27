@@ -29,6 +29,14 @@ class TestbankAccount(unittest.TestCase):
         self.account1.deposit(5000)
         self.assertEqual(self.account1.get_balance(), 15000)
 
+    def test_str_method(self):
+        self.assertEqual(str(self.account1),
+                         "Bank Hisobi: John, Balans: 10000 so'm")
+
+    def test_withdraw_all(self):
+        self.account1.withdraw(10000)
+        self.assertEqual(self.account1.get_balance(), 0)
+
 
 if __name__ == '__main__':
     unittest.main()

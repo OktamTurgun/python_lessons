@@ -24,3 +24,6 @@ class BankAccount:
 
     def get_balance(self):
         return self.balance
+
+    def __str__(self):
+        return f"Bank Hisobi: {self.owner}, Balans: {self.balance} so'm"
