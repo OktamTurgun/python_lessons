@@ -62,3 +62,6 @@ class Product:
         if amount > self.quantity:
             raise ValueError("Yatarli maxsulot yo'q!")
         self.quantity -= amount
+
+    def __repr__(self):
+        return f"Product(name='{self.name}', price={self.price}, quantity={self.quantity})"

@@ -1,34 +1,34 @@
-def rotate(nums, k):
-    n = len(nums)
-    if n == 0:
-        return
-    k = k % n  # Agar k > n bo'lsa
-    
-    # 1. Butun ro'yxatni teskari qilish
-    nums.reverse()
-    
-    # 2. Birinchi k elementni teskari qilish
-    nums[:k] = nums[:k][::-1]
-    
-    # 3. Qolgan elementlarni teskari qilish
-    nums[k:] = nums[k:][::-1]
+"""Quyidagi bog'lamaga kirsangiz, Wikipediadagi Python dasturlash tili haqidagi maqolani JSON ko'rinishida ko'rishingiz mumkin. Brauzerda chiqqan ma'lumotni JSON ko'rinishida saqlang (brauzerda Ctrl+S tugmasini bosib). Faylni Pythonda oching va konsolga maqolaning sarlavhasi (title) va qisqa matnini (extract) chiqaring: https://uz.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=Python
+"""
+import json
+import os
+print("Ishga tushgan katalog:", os.getcwd())
+# JSON faylini o'qish
+# with open('C:/Users/User/Documents/GitHub/python_lessons/python_lessons/34-dars.JSON/data/python_wikipedia.json', 'r', encoding='utf-8') as file:
+#     python_data = json.load(file)
 
-# Test qilish uchun misollar
-if __name__ == "__main__":
-    # 1-test
-    nums = [1, 2, 3, 4, 5, 6, 7]
-    k = 3
-    rotate(nums, k)
-    print(nums)  # [5, 6, 7, 1, 2, 3, 4]
-    
-    # 2-test
-    nums = [-1, -100, 3, 99]
-    k = 2
-    rotate(nums, k)
-    print(nums)  # [3, 99, -1, -100]
-    
-    # 3-test
-    nums = []
-    k = 3
-    rotate(nums, k)
-    print(nums)  # []
+# Fayl yo‘lini dinamik aniqlash (absolyut yo'l yasaymiz)
+base_dir = os.path.dirname(__file__)  # practise_g.py joylashgan papka
+file_path = os.path.join(base_dir, '..', 'data', 'python_wikipedia.json')
+file_path = os.path.abspath(file_path)  # Absolyut yo‘lga aylantiramiz
+
+print("Ochilishi kerak bo‘lgan fayl yo‘li:", file_path)
+
+with open(file_path, 'r', encoding='utf-8') as file:
+    python_data = json.load(file)
+
+# Ma'lumotlarni chiqarish (Wikipedia API strukturasi bo'yicha)
+pages = python_data['query']['pages']
+page_id = list(pages.keys())[0]  # Birinchi sahifa ID sini olamiz
+page_data = pages[page_id]
+
+print(f"Sarlavha: {page_data['title']}")
+print(f"Info: {page_data['extract']}")
+print(page_data)
+
+# Exercise: 2
+# with open("C:/Users/User/Documents/GitHub/python_lessons/python_lessons/34-dars.JSON/data/python_wikipedia.json") as f:
+#     data = json.load(f)
+
+# print(data["query"]["pages"]["13801"]["title"])
+# print(data["query"]["pages"]["13801"]["extract"])
