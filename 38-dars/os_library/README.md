@@ -84,5 +84,3 @@ def check_or_create(filename):
 * `os.rmdir(folder)` — papka o‘chirish
 
 ---
-
-🚀 Keyingi dars: `sys` kutubxonasi — tizim argumentlari va chiqish
