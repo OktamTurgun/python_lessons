@@ -1,7 +1,7 @@
 """
 12-dars: Python re (regular expressions) kutubxonasi
 Muallif: Uktam Turgunov
-Sana: 2025-06-28
+Sana: 2025-06-29
 
 Ushbu darsda re kutubxonasi yordamida quyidagilarni o‘rganamiz:
  - matndan ma’lumot izlash (search, findall)
@@ -12,14 +12,14 @@ Ushbu darsda re kutubxonasi yordamida quyidagilarni o‘rganamiz:
 
 import re
 
-# findall — barcha mos keladigan elementlarni topish
+# findall — barcha mos keladigan raqamlarni topish
 matn = "Bugun 2 ta olma, 3 ta banan va 1 ta shaftoli sotildi."
-raqamlar = re.findall(r"\\d+", matn)
+raqamlar = re.findall(r"\d+", matn)
 print("Topilgan raqamlar:", raqamlar)
 
-# search — birinchi moslikni topish
+# search — birinchi moslikni topish (email)
 email = "Kontakt: info@example.com"
-mos = re.search(r"[\w.-]+@[\w.-]+\\.\w+", email)
+mos = re.search(r"[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+", email)
 if mos:
     print("Email topildi:", mos.group())
 
@@ -28,16 +28,17 @@ s = "Python3"
 if re.match(r"Python", s):
     print("Boshlanishda Python bor")
 
+
 # sub — matnni almashtirish
 s2 = "Salom, aziz foydalanuvchi!"
-yangi = re.sub(r"foydalanuvchi", "Uktam", s2)
+yangi = re.sub(r"foydalanuvchi", "Bobir", s2)
 print(yangi)
 
 # Amaliy mashq: faqat raqamdan iborat matnmi?
 
 
 def raqammi(s):
-    return bool(re.fullmatch(r"\\d+", s))
+    return bool(re.fullmatch(r"\d+", s))
 
 
 print("'12345' raqammi?", raqammi("12345"))
@@ -57,7 +58,7 @@ print("'998901234567' telefonmi?", telefonmi("998901234567"))
 
 
 def emailmi(s):
-    return bool(re.fullmatch(r"[\w\.-]+@[\w\.-]+\.\w+", s))
+    return bool(re.fullmatch(r"[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+", s))
 
 
 print("'test@gmail.com' emailmi?", emailmi("test@gmail.com"))

@@ -58,8 +58,8 @@ re.match(r"Python", s)  # Boshi "Python" bo‘lsa True
 
 ```python
 s = "Salom, foydalanuvchi!"
-re.sub(r"foydalanuvchi", "Uktam", s)
-# Natija: "Salom, Uktam!"
+re.sub(r"foydalanuvchi", "Anvar", s)
+# Natija: "Salom, Anvar!"
 ```
 
 ---
@@ -103,5 +103,50 @@ print(raqammi("12a45"))  # False
   * `\d` — raqamlar (0-9)
   * `\w` — harf yoki raqam
   * `+`, `*`, `?` — takrorlash belgilar
+  ---
 
+  ## 💡 Taklif va yaxshilashlar
+
+  ### Xatolik va kamchiliklar
+
+  - `re.match()` va `re.fullmatch()` funksiyalari natijada `True` yoki `False` emas, balki `Match` obyekti yoki `None` qaytaradi. Kodlarda `bool()` bilan tekshirish yoki `.group()` ishlatish aniqroq bo‘ladi.
+  - `re.match()` misolida natijani `bool()` yoki `.group()` bilan ko‘rsatish mumkin.
+  - `re.fullmatch()` misolida ham natijani `bool()` bilan ko‘rsatish yaxshiroq.
+  - Ba’zi kodlarda natijalar izoh sifatida aniq ko‘rsatilmagan.
+
+  ### Qo‘shimcha takliflar
+
+  - Regex qisqa belgilarini to‘liqroq va tartibliroq ro‘yxat qilish:
+    - `\s` — bo‘sh joy (space, tab, newline)
+    - `.` — istalgan bitta belgi (yangi qatordan tashqari)
+    - `^` — satr boshi
+    - `$` — satr oxiri
+    - `[abc]` — a, b yoki c harflaridan biri
+    - `[^abc]` — a, b, c dan tashqari harflar
+  - Har bir funksiya uchun qisqa tavsif va natija misolini alohida ajratib ko‘rsatish.
+  - Amaliy mashq va uyga vazifalarni yanada aniqroq va bosqichma-bosqich yozish.
+  - Regex andozalarini sinab ko‘rish uchun qisqa misollar kiritish.
+  - `re.compile()` funksiyasi haqida qisqacha ma’lumot qo‘shish mumkin.
+
+  ### Qo‘shimcha manbalar
+
+  - [Python Regular Expression HOWTO](https://docs.python.org/3/howto/regex.html)
+  - [Pythex — Python regex tester](https://pythex.org/)
+
+  ### Yaxshilangan qisqa belgilar ro‘yxati
+
+  - `\d` — raqamlar (0-9)
+  - `\w` — harf yoki raqam
+  - `\s` — bo‘sh joy belgisi
+  - `.` — istalgan bitta belgi (yangi qatordan tashqari)
+  - `^` — satr boshi
+  - `$` — satr oxiri
+  - `+`, `*`, `?` — takrorlash belgilar
+  - `[abc]` — a, b yoki c harflaridan biri
+  - `[^abc]` — a, b, c dan tashqari harflar
+
+  ---
+
+  **Qayerga joylashtirish tavsiyasi:**  
+  Ushbu bo‘limni fayl oxirida, asosiy dars va qo‘shimcha manbalar tugagach, ya’ni `$SELECTION_PLACEHOLDER$` joyiga joylashtirish eng to‘g‘ri va chiroyli bo‘ladi. Chunki bu taklif va yaxshilashlar asosiy darsdan keyin, o‘quvchiga qo‘shimcha ma’lumot va rivojlanish uchun yo‘nalish beradi.
 ---
