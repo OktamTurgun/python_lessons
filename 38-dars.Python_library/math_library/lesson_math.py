@@ -91,6 +91,12 @@ print("math.log(8, 2):", math.log(8, 2))                   # 3.0
 print("math.log10(100):", math.log10(100))                 # 2.0
 print("math.exp(2):", math.exp(2))                         # e^2
 
+# Faktorial hisoblash
+print("math.factorial(0):", math.factorial(0))   # 1
+print("math.factorial(1):", math.factorial(1))   # 1
+print("math.factorial(3):", math.factorial(3))   # 6
+print("math.factorial(6):", math.factorial(6))   # 720
+
 # Amaliy mashq: radius 5 bo'lgan doira yuzasi
 
 
