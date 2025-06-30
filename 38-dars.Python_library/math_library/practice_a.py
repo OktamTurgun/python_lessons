@@ -1,12 +1,9 @@
 """
 18-dars: Python math kutubxonasi bilan amaliyot
 Muallif: Uktam Turgunov
-Sana: 2025-06-28
+Sana: 2025-06-30
 Mashq: 
-1. Foydalanuvchidan son olib uning ildizi, kvadrati va faktorialini hisoblang.
-2. Burchak berilganda uning `sin`, `cos`, `tan` qiymatlarini chiqaring.
-3. Quyidagi ifodani hisoblang:
-   **z = √(a² + b²)**  (a va b foydalanuvchidan olinadi)
+Foydalanuvchidan son olib uning ildizi, kvadrati va faktorialini hisoblang.
 """
 import math
 from termcolor import colored
