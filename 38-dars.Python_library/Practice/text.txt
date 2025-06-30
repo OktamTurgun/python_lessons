@@ -1,0 +1,20 @@
+Telefon Raqam Tekshirgich - Smart Check
+
+Bu innovatsion veb-ilova sizning telefon raqamingizni bir zumda tekshiradi! Faqat raqamni kiritishingiz yetarli - tizim darhol uning to'g'riligini aniqlab, xalqaro standartga moslashtiradi.
+
+Nega aynan bu sahifa?
+• Har qanday formatdagi raqamni tushunadi
+• Son-sanoqsiz xatolardan xabardor qiladi
+• Mobil va kompyuter versiyalari mavjud
+
+Sizga 90 123 45 67 kabi oddiy yoki +998(90)123-45-67 kabi murakkab formatlarda yozishingiz ham mumkin. Tizim aqlli algoritmi orqali barcha raqamlarni standart shaklga keltiradi.
+
+Xato qilishdan qo'rqmang - biz sizga to'g'ri yo'lni ko'rsatamiz!
+
+👉 [Hozir tekshirish] (https://example.com)
+
+Bu yerda ba'zi foydali havolalar mavjud:
+- OpenAI: https://openai.com
+- GitHub: https://github.com
+- Wikipedia: https://uz.wikipedia.org/wiki/Python_(dasturlash_tili)
+Agar ko‘proq ma’lumot kerak bo‘lsa, https://docs.python.org saytiga murojaat qiling.

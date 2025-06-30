@@ -110,3 +110,15 @@ while True:
 # matn3 = "Python va RE kutubxonasi Juda Qiziqarli!"
 # katta_harf = re.findall(r"[A-Z]", matn3)
 # print("Katta harflar:", katta_harf)
+
+# Amaliy mashq: Matndan barcha https URL larni ajratib olish
+
+matn4 = "Bizning saytlarimiz: https://example.com va https://github.com. Shuningdek, http://test.com ham mavjud."
+https_url = re.findall(r"https://[^\s]+", matn4)
+print("Topilgan https URL lar:", https_url)
+
+# Amaliy mashq: Matndan barcha URL larni ajratib olish
+url_pattern = r'https?://[^\s)>\]"\'`]+'
+matn5 = "Ko'proq ma'lumot uchun https://python.org yoki http://docs.python.org saytlariga tashrif buyuring. Yana https://github.com/ va https://t.me/python_uz kanali ham foydali."
+urls = re.findall(url_pattern, matn5)
+print("Topilgan URL lar:", urls)
