@@ -48,10 +48,10 @@ print(f"Yaqin butun son {y}: {round(y)}")                   # 4
 # Kvadrat ildiz va daraja
 x = 81
 y = math.sqrt(x)
-print("81 ning kvadrat ildizi:", y)  # 81 ning kvadrat ildizi: 9.0
+print("81 ning kvadrat ildizi:", y)                        # 9.0
 
-print("16 ning kvadrat ildizi:", math.sqrt(16))             # 4.0
-print("2 ning 3-darajasi:", math.pow(2, 3))                 # 8.0
+print("16 ning kvadrat ildizi:", math.sqrt(5**2+5**2))     # 4.0
+print("2 ning 3-darajasi:", math.pow(2, 3))                # 8.0
 
 # Daraja oshirish
 n = 5
