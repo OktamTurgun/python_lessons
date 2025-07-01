@@ -1,11 +1,11 @@
 """
 Bugun o'rgangan narsalaringizni matnga yozing va matnni Python yordamida oching
 """
-filename = r'C:\\Users\\User\\Documents\\GitHub\\python_lessons\\python_lessons\\33-dars.Pickle\\Amaliyot\\dars_xulosasi.txt'
-    
+filename = 'dars_xulosasi.txt'
+
 with open(filename, encoding='utf-8') as file:
-  matn = file.readlines()  # Fayldagi barcha qatorlarni o'qib olamiz
-  
+    matn = file.readlines()  # Fayldagi barcha qatorlarni o'qib olamiz
+
 # print(matn)  # O'qilgan talabalar ro'yxatini chiqaramiz
 
 # xulosa = [text.strip() for text in matn]

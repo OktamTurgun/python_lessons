@@ -5,14 +5,14 @@ Created on Thu Fri 20 09:53:14 2025
 
 @author: uktam
 """
-filename = 'C:/Users/User/Documents/GitHub/python_lessons/python_lessons/33-dars.Pickle/data/students.txt'
+filename = 'data/students.txt'
 # with open(filename) as file:
 #   for line in file:
 #     print(line)
-    
+
 with open(filename) as file:
-  talabalar = file.readlines()  # Fayldagi barcha qatorlarni o'qib olamiz
-  
+    talabalar = file.readlines()  # Fayldagi barcha qatorlarni o'qib olamiz
+
 print(talabalar)  # O'qilgan talabalar ro'yxatini chiqaramiz
 
 talabalar = [talaba.strip() for talaba in talabalar]
