@@ -92,4 +92,3 @@ print(yosh_hisobla("1990-06-15"))  # 34
 
 ---
 
-🚀 Keyingi dars: `os` kutubxonasi bilan fayl va papkalar bilan ishlash
