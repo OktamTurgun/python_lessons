@@ -4,8 +4,6 @@ Muallif: Uktam Turgunov
 Sana: 2025-07-01
 Mavzu: OpenCV (Computer Vision) moduli
 """
-
-# copyright Tim Ruscia aka techwithtim
 # code from https://github.com/techwithtim/OpenCV-Tutorials
 
 import cv2
