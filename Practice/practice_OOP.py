@@ -109,7 +109,7 @@ class Person:
 
     def get_info_by_number(self, number):
         """Fayldan raqamga mos ma'lumotni o'qib qaytaradi"""
-        with open(r"C:\Users\User\Documents\GitHub\python_lessons\python_lessons\Practice\life_path_info.txt", encoding="utf-8") as file:
+        with open("./life_path_info.txt", encoding="utf-8") as file:
             content = file.read()
         sections = content.split("#")
         for section in sections:
