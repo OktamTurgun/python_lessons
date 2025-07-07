@@ -3,7 +3,7 @@ from functools import reduce
 """
 Mavzu: Practice. OOP boʻlimi uchun amaliy topshiriq
 Muallif: Uktam Turgunov
-Sana: 2025-07-05
+Sana: 2025-07-07
 Vazifa:
 Sonlar ro'yxatini qabul qilib eng kattasini qaytaruvchi funksiya
 """
