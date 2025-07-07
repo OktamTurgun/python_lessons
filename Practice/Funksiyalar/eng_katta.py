@@ -1,7 +1,7 @@
 from functools import reduce
 
 """
-Mavzu: Practice. OOP boʻlimi uchun amaliy topshiriq
+Mavzu: Practice. Funksiya yozish mashq
 Muallif: Uktam Turgunov
 Sana: 2025-07-07
 Vazifa:

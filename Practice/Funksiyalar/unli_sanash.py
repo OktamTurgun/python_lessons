@@ -1,7 +1,7 @@
 from collections import Counter
 
 """
-Mavzu: Practice. OOP boʻlimi uchun amaliy topshiriq
+Mavzu: Practice. Matndagi unli harflar sonini hisoblash
 Muallif: Uktam Turgunov
 Sana: 2025-07-07
 Vazifa:
