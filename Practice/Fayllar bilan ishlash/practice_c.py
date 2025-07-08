@@ -13,8 +13,8 @@ borligini hisoblaydigan dastur yozing
 """
 
 
-def text_analysis(matn):
-    with open("matn.txt", 'r', encoding='utf-8') as file:
+def text_analysis(file_path):
+    with open(file_path, 'r', encoding='utf-8') as file:
         matn = file.read()
 
         satrlar = matn.splitlines()
