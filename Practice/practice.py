@@ -27,9 +27,7 @@ import random
 def generate_username():
     """
     Foydalanuvchiga o'z ismini kiritishni taklif qiladi, kiritilgan nomni teskari o'zgartirish orqali foydalanuvchi nomini yaratadi
-    va tasodifiy raqamni (0-9) qo'shib, keyin yaratilgan foydalanuvchi nomini chop etadi..
-    Returns:
-        None
+    va tasodifiy raqamni (0-9) qo'shib, keyin yaratilgan foydalanuvchi nomini chop etadi.
     """
 
     name = input("Ismingizni kiriting: ")
