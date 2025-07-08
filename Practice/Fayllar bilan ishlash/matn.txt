@@ -1,0 +1,4 @@
+Assalomu alaykum!
+Mening ismim Toshmat,
+Bu fayl test uchun.
+Python bilan mashq qilyapman.
