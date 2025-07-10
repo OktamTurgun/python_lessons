@@ -1,17 +1,10 @@
 """
-Mavzu: Practice with files.
+Mavzu: Practice with OOP.
 Muallif: Uktam Turgunov
 Sana: 2025-07-10
 
-Vazifa 1: fayllar bilan ishlash
-open, read, write, with:
-
 Vazifa: sinflar yozishni boshlash.
 Car klassi: model, yil, rang va metodlari.
-
-User klassi: ism, email va metodlari (masalan, emailni tekshiruvchi).
-
-BankAccount klassi: balans, depozit, yechib olish.
 """
 
 
