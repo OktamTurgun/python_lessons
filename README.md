@@ -1,6 +1,20 @@
 # Python Asoslari Darslari
 
-Ushbu repozitoriyda Python dasturlash asoslari bo'yicha darslar va amaliyotlar jamlangan.
+Ushbu repozitoriya Python dasturlash asoslari bo‘yicha darslar va amaliyotlarni o‘z ichiga oladi.  
+Har bir dars alohida papkada joylashgan bo‘lib, tartib bilan raqamlangan.
+
+---
+
+## Quick Start
+
+```bash
+# Repozitoriyani clone qilish
+git clone https://github.com/<username>/python_lessons.git
+cd python_lessons
+
+# Python versiyasini tekshirish
+python --version
+```
 
 ## Darslar ro'yxati
 
@@ -45,12 +59,39 @@ Ushbu repozitoriyda Python dasturlash asoslari bo'yicha darslar va amaliyotlar j
 
 ---
 
+## Extended Description
+
+Bu bo‘limda loyiha haqida kengroq ma’lumot yozishingiz mumkin:
+
+- Python asoslari tushuntiriladi.
+
+- Har bir dars .py fayllarda kod bilan berilgan.
+
+- **practice/** papkasida mustaqil mashqlar mavjud.
+
+- 🛠 **Commit & Branch** qoidalari
+
+## Har bir yangi o‘zgarish uchun branch oching:
+```bash
+git checkout -b update-readme
+```
+
+### Commit yozishda qisqa va aniq bo‘ling:
+```bash
+git commit -m "README.md fayli yangilandi"
+```
+
 ### Foydalanish
 
 1. Har bir dars papkasiga kiring va kerakli `.py` faylni ishga tushiring.  
 2. Amaliyotlar `practice/` papkasida.
 
 ---
+
+## License
+
+This project is licensed under the [MIT License](./LICENSE).
+
 
 > Muallif: [UktamTurgun](https://github.com/UktamTurgun)
 
